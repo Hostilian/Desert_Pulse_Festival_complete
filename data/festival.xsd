@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation><xs:documentation>Validation schema for Desert Pulse Festival XML data.</xs:documentation></xs:annotation>
+
+    <!-- CUSTOM RESTRICTION: festival id must use lowercase words, numbers, and hyphens. -->
+    <xs:simpleType name="idType"><xs:restriction base="xs:ID"><xs:pattern value="[a-z][a-z0-9\-]*"/></xs:restriction></xs:simpleType>
+    <!-- CUSTOM RESTRICTION: references use the same lowercase id pattern. -->
+    <xs:simpleType name="refType"><xs:restriction base="xs:string"><xs:pattern value="[a-z][a-z0-9\-]*"/></xs:restriction></xs:simpleType>
+    <!-- CUSTOM RESTRICTION: supported music/programme genres. -->
+    <xs:simpleType name="genreType"><xs:restriction base="xs:string"><xs:enumeration value="Electronic"/><xs:enumeration value="Indie"/><xs:enumeration value="Alternative"/><xs:enumeration value="Hip-Hop"/><xs:enumeration value="Experimental"/><xs:enumeration value="Ambient"/><xs:enumeration value="Synth-pop"/><xs:enumeration value="World Fusion"/></xs:restriction></xs:simpleType>
+    <!-- CUSTOM RESTRICTION: venue capacity range. -->
+    <xs:simpleType name="capacityType"><xs:restriction base="xs:positiveInteger"><xs:minInclusive value="100"/><xs:maxInclusive value="50000"/></xs:restriction></xs:simpleType>
+    <!-- CUSTOM RESTRICTION: event type enumeration. -->
+    <xs:simpleType name="eventType"><xs:restriction base="xs:string"><xs:enumeration value="concert"/><xs:enumeration value="workshop"/><xs:enumeration value="talk"/><xs:enumeration value="dj-set"/></xs:restriction></xs:simpleType>
+    <!-- CUSTOM RESTRICTION: edition number range. -->
+    <xs:simpleType name="editionType"><xs:restriction base="xs:positiveInteger"><xs:minInclusive value="1"/><xs:maxInclusive value="50"/></xs:restriction></xs:simpleType>
+
+    <xs:element name="festival">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="info" type="infoType"/>
+                <xs:element name="venues" type="venuesType"/>
+                <xs:element name="performers" type="performersType"/>
+                <xs:element name="programme" type="programmeType"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="idType" use="required"/>
+            <xs:anyAttribute namespace="http://www.w3.org/2001/XMLSchema-instance" processContents="lax"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="infoType"><xs:sequence><xs:element name="name" type="xs:string"/><xs:element name="year" type="xs:gYear"/><xs:element name="edition" type="editionType"/><xs:element name="location" type="xs:string"/><xs:element name="startDate" type="xs:date"/><xs:element name="endDate" type="xs:date"/><xs:element name="description" type="xs:string"/><xs:element name="ticketUrl" type="xs:anyURI"/><xs:element name="website" type="xs:anyURI"/></xs:sequence></xs:complexType>
+    <xs:complexType name="venuesType"><xs:sequence><xs:element name="venue" maxOccurs="unbounded"><xs:complexType><xs:sequence><xs:element name="name" type="xs:string"/><xs:element name="capacity" type="capacityType"/><xs:element name="description" type="xs:string"/><xs:element name="area" type="xs:string"/><xs:element name="geo" type="xs:string"/></xs:sequence><xs:attribute name="id" type="idType" use="required"/></xs:complexType></xs:element></xs:sequence></xs:complexType>
+    <xs:complexType name="performersType"><xs:sequence><xs:element name="performer" maxOccurs="unbounded"><xs:complexType><xs:sequence><xs:element name="name" type="xs:string"/><xs:element name="genre" type="genreType"/><xs:element name="country" type="xs:string"/><xs:element name="bio" type="xs:string"/></xs:sequence><xs:attribute name="id" type="idType" use="required"/></xs:complexType></xs:element></xs:sequence></xs:complexType>
+    <xs:complexType name="programmeType"><xs:sequence><xs:element name="event" maxOccurs="unbounded"><xs:complexType><xs:sequence><xs:element name="title" type="xs:string"/><xs:element name="performerId" type="refType"/><xs:element name="venueId" type="refType"/><xs:element name="start" type="xs:dateTime"/><xs:element name="end" type="xs:dateTime"/><xs:element name="description" type="xs:string"/></xs:sequence><xs:attribute name="id" type="idType" use="required"/><xs:attribute name="type" type="eventType" use="required"/></xs:complexType></xs:element></xs:sequence></xs:complexType>
+</xs:schema>

@@ -1,0 +1,613 @@
+{
+  "items": [
+    {
+      "id": "e1",
+      "type": "concert",
+      "title": "Lunar Waves Live at Desert Pulse",
+      "performerId": "p1",
+      "venueId": "v1",
+      "start": "2026-04-17T10:00:00",
+      "end": "2026-04-17T10:50:00",
+      "description": "Lunar Waves Live at Desert Pulse is part of the Friday programme at Solar Stage."
+    },
+    {
+      "id": "e2",
+      "type": "workshop",
+      "title": "Neon Horizon Live at Desert Pulse",
+      "performerId": "p2",
+      "venueId": "v2",
+      "start": "2026-04-17T11:00:00",
+      "end": "2026-04-17T12:15:00",
+      "description": "Neon Horizon Live at Desert Pulse is part of the Friday programme at Mirage Tent."
+    },
+    {
+      "id": "e3",
+      "type": "talk",
+      "title": "Artist Talk with Desert Echo",
+      "performerId": "p3",
+      "venueId": "v3",
+      "start": "2026-04-17T12:00:00",
+      "end": "2026-04-17T12:50:00",
+      "description": "Artist Talk with Desert Echo is part of the Friday programme at Dune Arena."
+    },
+    {
+      "id": "e4",
+      "type": "dj-set",
+      "title": "Solar Nomads Live at Desert Pulse",
+      "performerId": "p4",
+      "venueId": "v4",
+      "start": "2026-04-17T13:00:00",
+      "end": "2026-04-17T13:50:00",
+      "description": "Solar Nomads Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e5",
+      "type": "concert",
+      "title": "Mirage Bloom Live at Desert Pulse",
+      "performerId": "p5",
+      "venueId": "v1",
+      "start": "2026-04-17T14:00:00",
+      "end": "2026-04-17T14:50:00",
+      "description": "Mirage Bloom Live at Desert Pulse is part of the Friday programme at Solar Stage."
+    },
+    {
+      "id": "e6",
+      "type": "workshop",
+      "title": "Crystal Coyote Live at Desert Pulse",
+      "performerId": "p6",
+      "venueId": "v2",
+      "start": "2026-04-17T15:00:00",
+      "end": "2026-04-17T16:15:00",
+      "description": "Crystal Coyote Live at Desert Pulse is part of the Friday programme at Mirage Tent."
+    },
+    {
+      "id": "e7",
+      "type": "talk",
+      "title": "Artist Talk with Midnight Caravan",
+      "performerId": "p7",
+      "venueId": "v3",
+      "start": "2026-04-17T16:00:00",
+      "end": "2026-04-17T16:50:00",
+      "description": "Artist Talk with Midnight Caravan is part of the Friday programme at Dune Arena."
+    },
+    {
+      "id": "e8",
+      "type": "dj-set",
+      "title": "Velvet Comet Live at Desert Pulse",
+      "performerId": "p8",
+      "venueId": "v4",
+      "start": "2026-04-17T17:00:00",
+      "end": "2026-04-17T17:50:00",
+      "description": "Velvet Comet Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e9",
+      "type": "concert",
+      "title": "Static Palms Live at Desert Pulse",
+      "performerId": "p9",
+      "venueId": "v1",
+      "start": "2026-04-17T18:00:00",
+      "end": "2026-04-17T18:50:00",
+      "description": "Static Palms Live at Desert Pulse is part of the Friday programme at Solar Stage."
+    },
+    {
+      "id": "e10",
+      "type": "workshop",
+      "title": "Golden Circuit Live at Desert Pulse",
+      "performerId": "p10",
+      "venueId": "v2",
+      "start": "2026-04-17T19:00:00",
+      "end": "2026-04-17T20:15:00",
+      "description": "Golden Circuit Live at Desert Pulse is part of the Friday programme at Mirage Tent."
+    },
+    {
+      "id": "e11",
+      "type": "talk",
+      "title": "Artist Talk with Blue Ember",
+      "performerId": "p11",
+      "venueId": "v3",
+      "start": "2026-04-17T10:30:00",
+      "end": "2026-04-17T11:20:00",
+      "description": "Artist Talk with Blue Ember is part of the Friday programme at Dune Arena."
+    },
+    {
+      "id": "e12",
+      "type": "dj-set",
+      "title": "Dustline Choir Live at Desert Pulse",
+      "performerId": "p12",
+      "venueId": "v4",
+      "start": "2026-04-17T11:30:00",
+      "end": "2026-04-17T12:20:00",
+      "description": "Dustline Choir Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e13",
+      "type": "concert",
+      "title": "Prism Jackals Live at Desert Pulse",
+      "performerId": "p13",
+      "venueId": "v1",
+      "start": "2026-04-17T12:30:00",
+      "end": "2026-04-17T13:20:00",
+      "description": "Prism Jackals Live at Desert Pulse is part of the Friday programme at Solar Stage."
+    },
+    {
+      "id": "e14",
+      "type": "workshop",
+      "title": "Electric Saguaro Live at Desert Pulse",
+      "performerId": "p14",
+      "venueId": "v2",
+      "start": "2026-04-17T13:30:00",
+      "end": "2026-04-17T14:45:00",
+      "description": "Electric Saguaro Live at Desert Pulse is part of the Friday programme at Mirage Tent."
+    },
+    {
+      "id": "e15",
+      "type": "talk",
+      "title": "Artist Talk with The Sand Frequencies",
+      "performerId": "p15",
+      "venueId": "v3",
+      "start": "2026-04-17T14:30:00",
+      "end": "2026-04-17T15:20:00",
+      "description": "Artist Talk with The Sand Frequencies is part of the Friday programme at Dune Arena."
+    },
+    {
+      "id": "e16",
+      "type": "dj-set",
+      "title": "Nova Caravan Live at Desert Pulse",
+      "performerId": "p16",
+      "venueId": "v4",
+      "start": "2026-04-17T15:30:00",
+      "end": "2026-04-17T16:20:00",
+      "description": "Nova Caravan Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e17",
+      "type": "concert",
+      "title": "Amber Signals Live at Desert Pulse",
+      "performerId": "p17",
+      "venueId": "v1",
+      "start": "2026-04-17T16:30:00",
+      "end": "2026-04-17T17:20:00",
+      "description": "Amber Signals Live at Desert Pulse is part of the Friday programme at Solar Stage."
+    },
+    {
+      "id": "e18",
+      "type": "workshop",
+      "title": "Wild Mesa Live at Desert Pulse",
+      "performerId": "p18",
+      "venueId": "v2",
+      "start": "2026-04-17T17:30:00",
+      "end": "2026-04-17T18:45:00",
+      "description": "Wild Mesa Live at Desert Pulse is part of the Friday programme at Mirage Tent."
+    },
+    {
+      "id": "e19",
+      "type": "talk",
+      "title": "Artist Talk with Cactus Radio",
+      "performerId": "p19",
+      "venueId": "v3",
+      "start": "2026-04-17T18:30:00",
+      "end": "2026-04-17T19:20:00",
+      "description": "Artist Talk with Cactus Radio is part of the Friday programme at Dune Arena."
+    },
+    {
+      "id": "e20",
+      "type": "dj-set",
+      "title": "Echo Atlas Live at Desert Pulse",
+      "performerId": "p20",
+      "venueId": "v4",
+      "start": "2026-04-17T19:30:00",
+      "end": "2026-04-17T20:20:00",
+      "description": "Echo Atlas Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e21",
+      "type": "concert",
+      "title": "Silver Mirage Live at Desert Pulse",
+      "performerId": "p21",
+      "venueId": "v1",
+      "start": "2026-04-18T10:00:00",
+      "end": "2026-04-18T10:50:00",
+      "description": "Silver Mirage Live at Desert Pulse is part of the Saturday programme at Solar Stage."
+    },
+    {
+      "id": "e22",
+      "type": "workshop",
+      "title": "Sunset Operators Live at Desert Pulse",
+      "performerId": "p22",
+      "venueId": "v2",
+      "start": "2026-04-18T11:00:00",
+      "end": "2026-04-18T12:15:00",
+      "description": "Sunset Operators Live at Desert Pulse is part of the Saturday programme at Mirage Tent."
+    },
+    {
+      "id": "e23",
+      "type": "talk",
+      "title": "Artist Talk with Moonlit Engines",
+      "performerId": "p23",
+      "venueId": "v3",
+      "start": "2026-04-18T12:00:00",
+      "end": "2026-04-18T12:50:00",
+      "description": "Artist Talk with Moonlit Engines is part of the Saturday programme at Dune Arena."
+    },
+    {
+      "id": "e24",
+      "type": "dj-set",
+      "title": "The Heatwave Poets Live at Desert Pulse",
+      "performerId": "p24",
+      "venueId": "v4",
+      "start": "2026-04-18T13:00:00",
+      "end": "2026-04-18T13:50:00",
+      "description": "The Heatwave Poets Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e25",
+      "type": "concert",
+      "title": "Neon Dunes Live at Desert Pulse",
+      "performerId": "p25",
+      "venueId": "v1",
+      "start": "2026-04-18T14:00:00",
+      "end": "2026-04-18T14:50:00",
+      "description": "Neon Dunes Live at Desert Pulse is part of the Saturday programme at Solar Stage."
+    },
+    {
+      "id": "e26",
+      "type": "workshop",
+      "title": "Paper Satellites Live at Desert Pulse",
+      "performerId": "p26",
+      "venueId": "v2",
+      "start": "2026-04-18T15:00:00",
+      "end": "2026-04-18T16:15:00",
+      "description": "Paper Satellites Live at Desert Pulse is part of the Saturday programme at Mirage Tent."
+    },
+    {
+      "id": "e27",
+      "type": "talk",
+      "title": "Artist Talk with Saffron Pulse",
+      "performerId": "p27",
+      "venueId": "v3",
+      "start": "2026-04-18T16:00:00",
+      "end": "2026-04-18T16:50:00",
+      "description": "Artist Talk with Saffron Pulse is part of the Saturday programme at Dune Arena."
+    },
+    {
+      "id": "e28",
+      "type": "dj-set",
+      "title": "Violet Canyon Live at Desert Pulse",
+      "performerId": "p28",
+      "venueId": "v4",
+      "start": "2026-04-18T17:00:00",
+      "end": "2026-04-18T17:50:00",
+      "description": "Violet Canyon Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e29",
+      "type": "concert",
+      "title": "Signal Bloom Live at Desert Pulse",
+      "performerId": "p29",
+      "venueId": "v1",
+      "start": "2026-04-18T18:00:00",
+      "end": "2026-04-18T18:50:00",
+      "description": "Signal Bloom Live at Desert Pulse is part of the Saturday programme at Solar Stage."
+    },
+    {
+      "id": "e30",
+      "type": "workshop",
+      "title": "Solar Velvet Live at Desert Pulse",
+      "performerId": "p30",
+      "venueId": "v2",
+      "start": "2026-04-18T19:00:00",
+      "end": "2026-04-18T20:15:00",
+      "description": "Solar Velvet Live at Desert Pulse is part of the Saturday programme at Mirage Tent."
+    },
+    {
+      "id": "e31",
+      "type": "talk",
+      "title": "Artist Talk with The Distant Fires",
+      "performerId": "p31",
+      "venueId": "v3",
+      "start": "2026-04-18T10:30:00",
+      "end": "2026-04-18T11:20:00",
+      "description": "Artist Talk with The Distant Fires is part of the Saturday programme at Dune Arena."
+    },
+    {
+      "id": "e32",
+      "type": "dj-set",
+      "title": "Orbit Camp Live at Desert Pulse",
+      "performerId": "p32",
+      "venueId": "v4",
+      "start": "2026-04-18T11:30:00",
+      "end": "2026-04-18T12:20:00",
+      "description": "Orbit Camp Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e33",
+      "type": "concert",
+      "title": "Palm Static Live at Desert Pulse",
+      "performerId": "p33",
+      "venueId": "v1",
+      "start": "2026-04-18T12:30:00",
+      "end": "2026-04-18T13:20:00",
+      "description": "Palm Static Live at Desert Pulse is part of the Saturday programme at Solar Stage."
+    },
+    {
+      "id": "e34",
+      "type": "workshop",
+      "title": "Cassia Run Live at Desert Pulse",
+      "performerId": "p34",
+      "venueId": "v2",
+      "start": "2026-04-18T13:30:00",
+      "end": "2026-04-18T14:45:00",
+      "description": "Cassia Run Live at Desert Pulse is part of the Saturday programme at Mirage Tent."
+    },
+    {
+      "id": "e35",
+      "type": "talk",
+      "title": "Artist Talk with Magnetic Nomads",
+      "performerId": "p35",
+      "venueId": "v3",
+      "start": "2026-04-18T14:30:00",
+      "end": "2026-04-18T15:20:00",
+      "description": "Artist Talk with Magnetic Nomads is part of the Saturday programme at Dune Arena."
+    },
+    {
+      "id": "e36",
+      "type": "dj-set",
+      "title": "Afterglow Society Live at Desert Pulse",
+      "performerId": "p36",
+      "venueId": "v4",
+      "start": "2026-04-18T15:30:00",
+      "end": "2026-04-18T16:20:00",
+      "description": "Afterglow Society Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e37",
+      "type": "concert",
+      "title": "River of Sparks Live at Desert Pulse",
+      "performerId": "p37",
+      "venueId": "v1",
+      "start": "2026-04-18T16:30:00",
+      "end": "2026-04-18T17:20:00",
+      "description": "River of Sparks Live at Desert Pulse is part of the Saturday programme at Solar Stage."
+    },
+    {
+      "id": "e38",
+      "type": "workshop",
+      "title": "Oasis Frequency Live at Desert Pulse",
+      "performerId": "p38",
+      "venueId": "v2",
+      "start": "2026-04-18T17:30:00",
+      "end": "2026-04-18T18:45:00",
+      "description": "Oasis Frequency Live at Desert Pulse is part of the Saturday programme at Mirage Tent."
+    },
+    {
+      "id": "e39",
+      "type": "talk",
+      "title": "Artist Talk with Burning Halo",
+      "performerId": "p39",
+      "venueId": "v3",
+      "start": "2026-04-18T18:30:00",
+      "end": "2026-04-18T19:20:00",
+      "description": "Artist Talk with Burning Halo is part of the Saturday programme at Dune Arena."
+    },
+    {
+      "id": "e40",
+      "type": "dj-set",
+      "title": "Mirage Archive Live at Desert Pulse",
+      "performerId": "p40",
+      "venueId": "v4",
+      "start": "2026-04-18T19:30:00",
+      "end": "2026-04-18T20:20:00",
+      "description": "Mirage Archive Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e41",
+      "type": "concert",
+      "title": "Horizon Kids Live at Desert Pulse",
+      "performerId": "p41",
+      "venueId": "v1",
+      "start": "2026-04-19T10:00:00",
+      "end": "2026-04-19T10:50:00",
+      "description": "Horizon Kids Live at Desert Pulse is part of the Sunday programme at Solar Stage."
+    },
+    {
+      "id": "e42",
+      "type": "workshop",
+      "title": "Desert Bloomers Live at Desert Pulse",
+      "performerId": "p42",
+      "venueId": "v2",
+      "start": "2026-04-19T11:00:00",
+      "end": "2026-04-19T12:15:00",
+      "description": "Desert Bloomers Live at Desert Pulse is part of the Sunday programme at Mirage Tent."
+    },
+    {
+      "id": "e43",
+      "type": "talk",
+      "title": "Artist Talk with Electric Dust",
+      "performerId": "p43",
+      "venueId": "v3",
+      "start": "2026-04-19T12:00:00",
+      "end": "2026-04-19T12:50:00",
+      "description": "Artist Talk with Electric Dust is part of the Sunday programme at Dune Arena."
+    },
+    {
+      "id": "e44",
+      "type": "dj-set",
+      "title": "Crimson Lenses Live at Desert Pulse",
+      "performerId": "p44",
+      "venueId": "v4",
+      "start": "2026-04-19T13:00:00",
+      "end": "2026-04-19T13:50:00",
+      "description": "Crimson Lenses Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e45",
+      "type": "concert",
+      "title": "The Slow Rockets Live at Desert Pulse",
+      "performerId": "p45",
+      "venueId": "v1",
+      "start": "2026-04-19T14:00:00",
+      "end": "2026-04-19T14:50:00",
+      "description": "The Slow Rockets Live at Desert Pulse is part of the Sunday programme at Solar Stage."
+    },
+    {
+      "id": "e46",
+      "type": "workshop",
+      "title": "Sundown Ritual Live at Desert Pulse",
+      "performerId": "p46",
+      "venueId": "v2",
+      "start": "2026-04-19T15:00:00",
+      "end": "2026-04-19T16:15:00",
+      "description": "Sundown Ritual Live at Desert Pulse is part of the Sunday programme at Mirage Tent."
+    },
+    {
+      "id": "e47",
+      "type": "talk",
+      "title": "Artist Talk with Indigo Outpost",
+      "performerId": "p47",
+      "venueId": "v3",
+      "start": "2026-04-19T16:00:00",
+      "end": "2026-04-19T16:50:00",
+      "description": "Artist Talk with Indigo Outpost is part of the Sunday programme at Dune Arena."
+    },
+    {
+      "id": "e48",
+      "type": "dj-set",
+      "title": "Aerial Sand Live at Desert Pulse",
+      "performerId": "p48",
+      "venueId": "v4",
+      "start": "2026-04-19T17:00:00",
+      "end": "2026-04-19T17:50:00",
+      "description": "Aerial Sand Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e49",
+      "type": "concert",
+      "title": "Motel Aurora Live at Desert Pulse",
+      "performerId": "p49",
+      "venueId": "v1",
+      "start": "2026-04-19T18:00:00",
+      "end": "2026-04-19T18:50:00",
+      "description": "Motel Aurora Live at Desert Pulse is part of the Sunday programme at Solar Stage."
+    },
+    {
+      "id": "e50",
+      "type": "workshop",
+      "title": "Quartz Garden Live at Desert Pulse",
+      "performerId": "p50",
+      "venueId": "v2",
+      "start": "2026-04-19T19:00:00",
+      "end": "2026-04-19T20:15:00",
+      "description": "Quartz Garden Live at Desert Pulse is part of the Sunday programme at Mirage Tent."
+    },
+    {
+      "id": "e51",
+      "type": "talk",
+      "title": "Artist Talk with Morning Mirage",
+      "performerId": "p51",
+      "venueId": "v3",
+      "start": "2026-04-19T10:30:00",
+      "end": "2026-04-19T11:20:00",
+      "description": "Artist Talk with Morning Mirage is part of the Sunday programme at Dune Arena."
+    },
+    {
+      "id": "e52",
+      "type": "dj-set",
+      "title": "Velvet Monsoon Live at Desert Pulse",
+      "performerId": "p52",
+      "venueId": "v4",
+      "start": "2026-04-19T11:30:00",
+      "end": "2026-04-19T12:20:00",
+      "description": "Velvet Monsoon Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e53",
+      "type": "concert",
+      "title": "Dream Circuit Live at Desert Pulse",
+      "performerId": "p53",
+      "venueId": "v1",
+      "start": "2026-04-19T12:30:00",
+      "end": "2026-04-19T13:20:00",
+      "description": "Dream Circuit Live at Desert Pulse is part of the Sunday programme at Solar Stage."
+    },
+    {
+      "id": "e54",
+      "type": "workshop",
+      "title": "The Bronze Keys Live at Desert Pulse",
+      "performerId": "p54",
+      "venueId": "v2",
+      "start": "2026-04-19T13:30:00",
+      "end": "2026-04-19T14:45:00",
+      "description": "The Bronze Keys Live at Desert Pulse is part of the Sunday programme at Mirage Tent."
+    },
+    {
+      "id": "e55",
+      "type": "talk",
+      "title": "Artist Talk with Night Saguaro",
+      "performerId": "p55",
+      "venueId": "v3",
+      "start": "2026-04-19T14:30:00",
+      "end": "2026-04-19T15:20:00",
+      "description": "Artist Talk with Night Saguaro is part of the Sunday programme at Dune Arena."
+    },
+    {
+      "id": "e56",
+      "type": "dj-set",
+      "title": "Canyon Lights Live at Desert Pulse",
+      "performerId": "p56",
+      "venueId": "v4",
+      "start": "2026-04-19T15:30:00",
+      "end": "2026-04-19T16:20:00",
+      "description": "Canyon Lights Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome."
+    },
+    {
+      "id": "e57",
+      "type": "concert",
+      "title": "Soft Volcano Live at Desert Pulse",
+      "performerId": "p57",
+      "venueId": "v1",
+      "start": "2026-04-19T16:30:00",
+      "end": "2026-04-19T17:20:00",
+      "description": "Soft Volcano Live at Desert Pulse is part of the Sunday programme at Solar Stage."
+    },
+    {
+      "id": "e58",
+      "type": "workshop",
+      "title": "Radio Mirage Live at Desert Pulse",
+      "performerId": "p58",
+      "venueId": "v2",
+      "start": "2026-04-19T17:30:00",
+      "end": "2026-04-19T18:45:00",
+      "description": "Radio Mirage Live at Desert Pulse is part of the Sunday programme at Mirage Tent."
+    },
+    {
+      "id": "e59",
+      "type": "talk",
+      "title": "Artist Talk with Golden Antenna",
+      "performerId": "p59",
+      "venueId": "v3",
+      "start": "2026-04-19T18:30:00",
+      "end": "2026-04-19T19:20:00",
+      "description": "Artist Talk with Golden Antenna is part of the Sunday programme at Dune Arena."
+    },
+    {
+      "id": "e60",
+      "type": "dj-set",
+      "title": "Luna Mesa Live at Desert Pulse",
+      "performerId": "p60",
+      "venueId": "v4",
+      "start": "2026-04-19T19:30:00",
+      "end": "2026-04-19T20:20:00",
+      "description": "Luna Mesa Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome."
+    }
+  ],
+  "count": 60,
+  "filters": {
+    "day": "YYYY-MM-DD",
+    "venueId": "v1",
+    "performerId": "p1"
+  },
+  "page": 1,
+  "pageSize": 20,
+  "totalPages": 3
+}

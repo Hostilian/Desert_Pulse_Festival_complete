@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="desert-pulse-2026" xsi:noNamespaceSchemaLocation="festival.xsd">
+    <info>
+        <name>Desert Pulse Festival</name>
+        <year>2026</year>
+        <edition>1</edition>
+        <location>Solara Desert Park, Arizona, USA</location>
+        <startDate>2026-04-17</startDate>
+        <endDate>2026-04-19</endDate>
+        <description>A fictional three-day desert music and arts festival combining indie, electronic, hip-hop, workshops, visual installations, and night-time desert experiences.</description>
+        <ticketUrl>https://example.com/desert-pulse/tickets</ticketUrl>
+        <website>https://example.com/desert-pulse</website>
+    </info>
+    <venues>
+        <venue id="v1">
+            <name>Solar Stage</name>
+            <capacity>20000</capacity>
+            <description>Main open-air stage for headliners and large concerts.</description>
+            <area>North Field</area>
+            <geo>34.101,-111.021</geo>
+        </venue>
+        <venue id="v2">
+            <name>Mirage Tent</name>
+            <capacity>8000</capacity>
+            <description>Covered tent focused on electronic, experimental, and late-night sets.</description>
+            <area>East Dunes</area>
+            <geo>34.098,-111.018</geo>
+        </venue>
+        <venue id="v3">
+            <name>Dune Arena</name>
+            <capacity>12000</capacity>
+            <description>Outdoor arena for indie, hip-hop, and alternative shows.</description>
+            <area>South Ridge</area>
+            <geo>34.095,-111.026</geo>
+        </venue>
+        <venue id="v4">
+            <name>Oasis Workshop Dome</name>
+            <capacity>1500</capacity>
+            <description>Small venue for talks, workshops, acoustic sessions, and artist meetings.</description>
+            <area>Central Oasis</area>
+            <geo>34.099,-111.022</geo>
+        </venue>
+    </venues>
+    <performers>
+        <performer id="p1">
+            <name>Lunar Waves</name>
+            <genre>Electronic</genre>
+            <country>USA</country>
+            <bio>Lunar Waves brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p2">
+            <name>Neon Horizon</name>
+            <genre>Indie</genre>
+            <country>UK</country>
+            <bio>Neon Horizon brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p3">
+            <name>Desert Echo</name>
+            <genre>Alternative</genre>
+            <country>Australia</country>
+            <bio>Desert Echo brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p4">
+            <name>Solar Nomads</name>
+            <genre>Hip-Hop</genre>
+            <country>Canada</country>
+            <bio>Solar Nomads brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p5">
+            <name>Mirage Bloom</name>
+            <genre>Experimental</genre>
+            <country>Germany</country>
+            <bio>Mirage Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p6">
+            <name>Crystal Coyote</name>
+            <genre>Ambient</genre>
+            <country>France</country>
+            <bio>Crystal Coyote brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p7">
+            <name>Midnight Caravan</name>
+            <genre>Synth-pop</genre>
+            <country>Mexico</country>
+            <bio>Midnight Caravan brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p8">
+            <name>Velvet Comet</name>
+            <genre>World Fusion</genre>
+            <country>Spain</country>
+            <bio>Velvet Comet brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p9">
+            <name>Static Palms</name>
+            <genre>Electronic</genre>
+            <country>Japan</country>
+            <bio>Static Palms brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p10">
+            <name>Golden Circuit</name>
+            <genre>Indie</genre>
+            <country>Brazil</country>
+            <bio>Golden Circuit brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p11">
+            <name>Blue Ember</name>
+            <genre>Alternative</genre>
+            <country>Netherlands</country>
+            <bio>Blue Ember brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p12">
+            <name>Dustline Choir</name>
+            <genre>Hip-Hop</genre>
+            <country>Czech Republic</country>
+            <bio>Dustline Choir brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p13">
+            <name>Prism Jackals</name>
+            <genre>Experimental</genre>
+            <country>USA</country>
+            <bio>Prism Jackals brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p14">
+            <name>Electric Saguaro</name>
+            <genre>Ambient</genre>
+            <country>UK</country>
+            <bio>Electric Saguaro brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p15">
+            <name>The Sand Frequencies</name>
+            <genre>Synth-pop</genre>
+            <country>Australia</country>
+            <bio>The Sand Frequencies brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p16">
+            <name>Nova Caravan</name>
+            <genre>World Fusion</genre>
+            <country>Canada</country>
+            <bio>Nova Caravan brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p17">
+            <name>Amber Signals</name>
+            <genre>Electronic</genre>
+            <country>Germany</country>
+            <bio>Amber Signals brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p18">
+            <name>Wild Mesa</name>
+            <genre>Indie</genre>
+            <country>France</country>
+            <bio>Wild Mesa brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p19">
+            <name>Cactus Radio</name>
+            <genre>Alternative</genre>
+            <country>Mexico</country>
+            <bio>Cactus Radio brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p20">
+            <name>Echo Atlas</name>
+            <genre>Hip-Hop</genre>
+            <country>Spain</country>
+            <bio>Echo Atlas brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p21">
+            <name>Silver Mirage</name>
+            <genre>Experimental</genre>
+            <country>Japan</country>
+            <bio>Silver Mirage brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p22">
+            <name>Sunset Operators</name>
+            <genre>Ambient</genre>
+            <country>Brazil</country>
+            <bio>Sunset Operators brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p23">
+            <name>Moonlit Engines</name>
+            <genre>Synth-pop</genre>
+            <country>Netherlands</country>
+            <bio>Moonlit Engines brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p24">
+            <name>The Heatwave Poets</name>
+            <genre>World Fusion</genre>
+            <country>Czech Republic</country>
+            <bio>The Heatwave Poets brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p25">
+            <name>Neon Dunes</name>
+            <genre>Electronic</genre>
+            <country>USA</country>
+            <bio>Neon Dunes brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p26">
+            <name>Paper Satellites</name>
+            <genre>Indie</genre>
+            <country>UK</country>
+            <bio>Paper Satellites brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p27">
+            <name>Saffron Pulse</name>
+            <genre>Alternative</genre>
+            <country>Australia</country>
+            <bio>Saffron Pulse brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p28">
+            <name>Violet Canyon</name>
+            <genre>Hip-Hop</genre>
+            <country>Canada</country>
+            <bio>Violet Canyon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p29">
+            <name>Signal Bloom</name>
+            <genre>Experimental</genre>
+            <country>Germany</country>
+            <bio>Signal Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p30">
+            <name>Solar Velvet</name>
+            <genre>Ambient</genre>
+            <country>France</country>
+            <bio>Solar Velvet brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p31">
+            <name>The Distant Fires</name>
+            <genre>Synth-pop</genre>
+            <country>Mexico</country>
+            <bio>The Distant Fires brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p32">
+            <name>Orbit Camp</name>
+            <genre>World Fusion</genre>
+            <country>Spain</country>
+            <bio>Orbit Camp brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p33">
+            <name>Palm Static</name>
+            <genre>Electronic</genre>
+            <country>Japan</country>
+            <bio>Palm Static brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p34">
+            <name>Cassia Run</name>
+            <genre>Indie</genre>
+            <country>Brazil</country>
+            <bio>Cassia Run brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p35">
+            <name>Magnetic Nomads</name>
+            <genre>Alternative</genre>
+            <country>Netherlands</country>
+            <bio>Magnetic Nomads brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p36">
+            <name>Afterglow Society</name>
+            <genre>Hip-Hop</genre>
+            <country>Czech Republic</country>
+            <bio>Afterglow Society brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p37">
+            <name>River of Sparks</name>
+            <genre>Experimental</genre>
+            <country>USA</country>
+            <bio>River of Sparks brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p38">
+            <name>Oasis Frequency</name>
+            <genre>Ambient</genre>
+            <country>UK</country>
+            <bio>Oasis Frequency brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p39">
+            <name>Burning Halo</name>
+            <genre>Synth-pop</genre>
+            <country>Australia</country>
+            <bio>Burning Halo brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p40">
+            <name>Mirage Archive</name>
+            <genre>World Fusion</genre>
+            <country>Canada</country>
+            <bio>Mirage Archive brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p41">
+            <name>Horizon Kids</name>
+            <genre>Electronic</genre>
+            <country>Germany</country>
+            <bio>Horizon Kids brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p42">
+            <name>Desert Bloomers</name>
+            <genre>Indie</genre>
+            <country>France</country>
+            <bio>Desert Bloomers brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p43">
+            <name>Electric Dust</name>
+            <genre>Alternative</genre>
+            <country>Mexico</country>
+            <bio>Electric Dust brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p44">
+            <name>Crimson Lenses</name>
+            <genre>Hip-Hop</genre>
+            <country>Spain</country>
+            <bio>Crimson Lenses brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p45">
+            <name>The Slow Rockets</name>
+            <genre>Experimental</genre>
+            <country>Japan</country>
+            <bio>The Slow Rockets brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p46">
+            <name>Sundown Ritual</name>
+            <genre>Ambient</genre>
+            <country>Brazil</country>
+            <bio>Sundown Ritual brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p47">
+            <name>Indigo Outpost</name>
+            <genre>Synth-pop</genre>
+            <country>Netherlands</country>
+            <bio>Indigo Outpost brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p48">
+            <name>Aerial Sand</name>
+            <genre>World Fusion</genre>
+            <country>Czech Republic</country>
+            <bio>Aerial Sand brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p49">
+            <name>Motel Aurora</name>
+            <genre>Electronic</genre>
+            <country>USA</country>
+            <bio>Motel Aurora brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p50">
+            <name>Quartz Garden</name>
+            <genre>Indie</genre>
+            <country>UK</country>
+            <bio>Quartz Garden brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p51">
+            <name>Morning Mirage</name>
+            <genre>Alternative</genre>
+            <country>Australia</country>
+            <bio>Morning Mirage brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p52">
+            <name>Velvet Monsoon</name>
+            <genre>Hip-Hop</genre>
+            <country>Canada</country>
+            <bio>Velvet Monsoon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p53">
+            <name>Dream Circuit</name>
+            <genre>Experimental</genre>
+            <country>Germany</country>
+            <bio>Dream Circuit brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p54">
+            <name>The Bronze Keys</name>
+            <genre>Ambient</genre>
+            <country>France</country>
+            <bio>The Bronze Keys brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p55">
+            <name>Night Saguaro</name>
+            <genre>Synth-pop</genre>
+            <country>Mexico</country>
+            <bio>Night Saguaro brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p56">
+            <name>Canyon Lights</name>
+            <genre>World Fusion</genre>
+            <country>Spain</country>
+            <bio>Canyon Lights brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p57">
+            <name>Soft Volcano</name>
+            <genre>Electronic</genre>
+            <country>Japan</country>
+            <bio>Soft Volcano brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p58">
+            <name>Radio Mirage</name>
+            <genre>Indie</genre>
+            <country>Brazil</country>
+            <bio>Radio Mirage brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p59">
+            <name>Golden Antenna</name>
+            <genre>Alternative</genre>
+            <country>Netherlands</country>
+            <bio>Golden Antenna brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+        <performer id="p60">
+            <name>Luna Mesa</name>
+            <genre>Hip-Hop</genre>
+            <country>Czech Republic</country>
+            <bio>Luna Mesa brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+        </performer>
+    </performers>
+    <programme>
+        <event id="e1" type="concert">
+            <title>Lunar Waves Live at Desert Pulse</title>
+            <performerId>p1</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-17T10:00:00</start>
+            <end>2026-04-17T10:50:00</end>
+            <description>Lunar Waves Live at Desert Pulse is part of the Friday programme at Solar Stage.</description>
+        </event>
+        <event id="e2" type="workshop">
+            <title>Neon Horizon Live at Desert Pulse</title>
+            <performerId>p2</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-17T11:00:00</start>
+            <end>2026-04-17T12:15:00</end>
+            <description>Neon Horizon Live at Desert Pulse is part of the Friday programme at Mirage Tent.</description>
+        </event>
+        <event id="e3" type="talk">
+            <title>Artist Talk with Desert Echo</title>
+            <performerId>p3</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-17T12:00:00</start>
+            <end>2026-04-17T12:50:00</end>
+            <description>Artist Talk with Desert Echo is part of the Friday programme at Dune Arena.</description>
+        </event>
+        <event id="e4" type="dj-set">
+            <title>Solar Nomads Live at Desert Pulse</title>
+            <performerId>p4</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-17T13:00:00</start>
+            <end>2026-04-17T13:50:00</end>
+            <description>Solar Nomads Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e5" type="concert">
+            <title>Mirage Bloom Live at Desert Pulse</title>
+            <performerId>p5</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-17T14:00:00</start>
+            <end>2026-04-17T14:50:00</end>
+            <description>Mirage Bloom Live at Desert Pulse is part of the Friday programme at Solar Stage.</description>
+        </event>
+        <event id="e6" type="workshop">
+            <title>Crystal Coyote Live at Desert Pulse</title>
+            <performerId>p6</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-17T15:00:00</start>
+            <end>2026-04-17T16:15:00</end>
+            <description>Crystal Coyote Live at Desert Pulse is part of the Friday programme at Mirage Tent.</description>
+        </event>
+        <event id="e7" type="talk">
+            <title>Artist Talk with Midnight Caravan</title>
+            <performerId>p7</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-17T16:00:00</start>
+            <end>2026-04-17T16:50:00</end>
+            <description>Artist Talk with Midnight Caravan is part of the Friday programme at Dune Arena.</description>
+        </event>
+        <event id="e8" type="dj-set">
+            <title>Velvet Comet Live at Desert Pulse</title>
+            <performerId>p8</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-17T17:00:00</start>
+            <end>2026-04-17T17:50:00</end>
+            <description>Velvet Comet Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e9" type="concert">
+            <title>Static Palms Live at Desert Pulse</title>
+            <performerId>p9</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-17T18:00:00</start>
+            <end>2026-04-17T18:50:00</end>
+            <description>Static Palms Live at Desert Pulse is part of the Friday programme at Solar Stage.</description>
+        </event>
+        <event id="e10" type="workshop">
+            <title>Golden Circuit Live at Desert Pulse</title>
+            <performerId>p10</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-17T19:00:00</start>
+            <end>2026-04-17T20:15:00</end>
+            <description>Golden Circuit Live at Desert Pulse is part of the Friday programme at Mirage Tent.</description>
+        </event>
+        <event id="e11" type="talk">
+            <title>Artist Talk with Blue Ember</title>
+            <performerId>p11</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-17T10:30:00</start>
+            <end>2026-04-17T11:20:00</end>
+            <description>Artist Talk with Blue Ember is part of the Friday programme at Dune Arena.</description>
+        </event>
+        <event id="e12" type="dj-set">
+            <title>Dustline Choir Live at Desert Pulse</title>
+            <performerId>p12</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-17T11:30:00</start>
+            <end>2026-04-17T12:20:00</end>
+            <description>Dustline Choir Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e13" type="concert">
+            <title>Prism Jackals Live at Desert Pulse</title>
+            <performerId>p13</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-17T12:30:00</start>
+            <end>2026-04-17T13:20:00</end>
+            <description>Prism Jackals Live at Desert Pulse is part of the Friday programme at Solar Stage.</description>
+        </event>
+        <event id="e14" type="workshop">
+            <title>Electric Saguaro Live at Desert Pulse</title>
+            <performerId>p14</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-17T13:30:00</start>
+            <end>2026-04-17T14:45:00</end>
+            <description>Electric Saguaro Live at Desert Pulse is part of the Friday programme at Mirage Tent.</description>
+        </event>
+        <event id="e15" type="talk">
+            <title>Artist Talk with The Sand Frequencies</title>
+            <performerId>p15</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-17T14:30:00</start>
+            <end>2026-04-17T15:20:00</end>
+            <description>Artist Talk with The Sand Frequencies is part of the Friday programme at Dune Arena.</description>
+        </event>
+        <event id="e16" type="dj-set">
+            <title>Nova Caravan Live at Desert Pulse</title>
+            <performerId>p16</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-17T15:30:00</start>
+            <end>2026-04-17T16:20:00</end>
+            <description>Nova Caravan Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e17" type="concert">
+            <title>Amber Signals Live at Desert Pulse</title>
+            <performerId>p17</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-17T16:30:00</start>
+            <end>2026-04-17T17:20:00</end>
+            <description>Amber Signals Live at Desert Pulse is part of the Friday programme at Solar Stage.</description>
+        </event>
+        <event id="e18" type="workshop">
+            <title>Wild Mesa Live at Desert Pulse</title>
+            <performerId>p18</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-17T17:30:00</start>
+            <end>2026-04-17T18:45:00</end>
+            <description>Wild Mesa Live at Desert Pulse is part of the Friday programme at Mirage Tent.</description>
+        </event>
+        <event id="e19" type="talk">
+            <title>Artist Talk with Cactus Radio</title>
+            <performerId>p19</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-17T18:30:00</start>
+            <end>2026-04-17T19:20:00</end>
+            <description>Artist Talk with Cactus Radio is part of the Friday programme at Dune Arena.</description>
+        </event>
+        <event id="e20" type="dj-set">
+            <title>Echo Atlas Live at Desert Pulse</title>
+            <performerId>p20</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-17T19:30:00</start>
+            <end>2026-04-17T20:20:00</end>
+            <description>Echo Atlas Live at Desert Pulse is part of the Friday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e21" type="concert">
+            <title>Silver Mirage Live at Desert Pulse</title>
+            <performerId>p21</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-18T10:00:00</start>
+            <end>2026-04-18T10:50:00</end>
+            <description>Silver Mirage Live at Desert Pulse is part of the Saturday programme at Solar Stage.</description>
+        </event>
+        <event id="e22" type="workshop">
+            <title>Sunset Operators Live at Desert Pulse</title>
+            <performerId>p22</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-18T11:00:00</start>
+            <end>2026-04-18T12:15:00</end>
+            <description>Sunset Operators Live at Desert Pulse is part of the Saturday programme at Mirage Tent.</description>
+        </event>
+        <event id="e23" type="talk">
+            <title>Artist Talk with Moonlit Engines</title>
+            <performerId>p23</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-18T12:00:00</start>
+            <end>2026-04-18T12:50:00</end>
+            <description>Artist Talk with Moonlit Engines is part of the Saturday programme at Dune Arena.</description>
+        </event>
+        <event id="e24" type="dj-set">
+            <title>The Heatwave Poets Live at Desert Pulse</title>
+            <performerId>p24</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-18T13:00:00</start>
+            <end>2026-04-18T13:50:00</end>
+            <description>The Heatwave Poets Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e25" type="concert">
+            <title>Neon Dunes Live at Desert Pulse</title>
+            <performerId>p25</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-18T14:00:00</start>
+            <end>2026-04-18T14:50:00</end>
+            <description>Neon Dunes Live at Desert Pulse is part of the Saturday programme at Solar Stage.</description>
+        </event>
+        <event id="e26" type="workshop">
+            <title>Paper Satellites Live at Desert Pulse</title>
+            <performerId>p26</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-18T15:00:00</start>
+            <end>2026-04-18T16:15:00</end>
+            <description>Paper Satellites Live at Desert Pulse is part of the Saturday programme at Mirage Tent.</description>
+        </event>
+        <event id="e27" type="talk">
+            <title>Artist Talk with Saffron Pulse</title>
+            <performerId>p27</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-18T16:00:00</start>
+            <end>2026-04-18T16:50:00</end>
+            <description>Artist Talk with Saffron Pulse is part of the Saturday programme at Dune Arena.</description>
+        </event>
+        <event id="e28" type="dj-set">
+            <title>Violet Canyon Live at Desert Pulse</title>
+            <performerId>p28</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-18T17:00:00</start>
+            <end>2026-04-18T17:50:00</end>
+            <description>Violet Canyon Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e29" type="concert">
+            <title>Signal Bloom Live at Desert Pulse</title>
+            <performerId>p29</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-18T18:00:00</start>
+            <end>2026-04-18T18:50:00</end>
+            <description>Signal Bloom Live at Desert Pulse is part of the Saturday programme at Solar Stage.</description>
+        </event>
+        <event id="e30" type="workshop">
+            <title>Solar Velvet Live at Desert Pulse</title>
+            <performerId>p30</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-18T19:00:00</start>
+            <end>2026-04-18T20:15:00</end>
+            <description>Solar Velvet Live at Desert Pulse is part of the Saturday programme at Mirage Tent.</description>
+        </event>
+        <event id="e31" type="talk">
+            <title>Artist Talk with The Distant Fires</title>
+            <performerId>p31</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-18T10:30:00</start>
+            <end>2026-04-18T11:20:00</end>
+            <description>Artist Talk with The Distant Fires is part of the Saturday programme at Dune Arena.</description>
+        </event>
+        <event id="e32" type="dj-set">
+            <title>Orbit Camp Live at Desert Pulse</title>
+            <performerId>p32</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-18T11:30:00</start>
+            <end>2026-04-18T12:20:00</end>
+            <description>Orbit Camp Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e33" type="concert">
+            <title>Palm Static Live at Desert Pulse</title>
+            <performerId>p33</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-18T12:30:00</start>
+            <end>2026-04-18T13:20:00</end>
+            <description>Palm Static Live at Desert Pulse is part of the Saturday programme at Solar Stage.</description>
+        </event>
+        <event id="e34" type="workshop">
+            <title>Cassia Run Live at Desert Pulse</title>
+            <performerId>p34</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-18T13:30:00</start>
+            <end>2026-04-18T14:45:00</end>
+            <description>Cassia Run Live at Desert Pulse is part of the Saturday programme at Mirage Tent.</description>
+        </event>
+        <event id="e35" type="talk">
+            <title>Artist Talk with Magnetic Nomads</title>
+            <performerId>p35</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-18T14:30:00</start>
+            <end>2026-04-18T15:20:00</end>
+            <description>Artist Talk with Magnetic Nomads is part of the Saturday programme at Dune Arena.</description>
+        </event>
+        <event id="e36" type="dj-set">
+            <title>Afterglow Society Live at Desert Pulse</title>
+            <performerId>p36</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-18T15:30:00</start>
+            <end>2026-04-18T16:20:00</end>
+            <description>Afterglow Society Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e37" type="concert">
+            <title>River of Sparks Live at Desert Pulse</title>
+            <performerId>p37</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-18T16:30:00</start>
+            <end>2026-04-18T17:20:00</end>
+            <description>River of Sparks Live at Desert Pulse is part of the Saturday programme at Solar Stage.</description>
+        </event>
+        <event id="e38" type="workshop">
+            <title>Oasis Frequency Live at Desert Pulse</title>
+            <performerId>p38</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-18T17:30:00</start>
+            <end>2026-04-18T18:45:00</end>
+            <description>Oasis Frequency Live at Desert Pulse is part of the Saturday programme at Mirage Tent.</description>
+        </event>
+        <event id="e39" type="talk">
+            <title>Artist Talk with Burning Halo</title>
+            <performerId>p39</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-18T18:30:00</start>
+            <end>2026-04-18T19:20:00</end>
+            <description>Artist Talk with Burning Halo is part of the Saturday programme at Dune Arena.</description>
+        </event>
+        <event id="e40" type="dj-set">
+            <title>Mirage Archive Live at Desert Pulse</title>
+            <performerId>p40</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-18T19:30:00</start>
+            <end>2026-04-18T20:20:00</end>
+            <description>Mirage Archive Live at Desert Pulse is part of the Saturday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e41" type="concert">
+            <title>Horizon Kids Live at Desert Pulse</title>
+            <performerId>p41</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-19T10:00:00</start>
+            <end>2026-04-19T10:50:00</end>
+            <description>Horizon Kids Live at Desert Pulse is part of the Sunday programme at Solar Stage.</description>
+        </event>
+        <event id="e42" type="workshop">
+            <title>Desert Bloomers Live at Desert Pulse</title>
+            <performerId>p42</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-19T11:00:00</start>
+            <end>2026-04-19T12:15:00</end>
+            <description>Desert Bloomers Live at Desert Pulse is part of the Sunday programme at Mirage Tent.</description>
+        </event>
+        <event id="e43" type="talk">
+            <title>Artist Talk with Electric Dust</title>
+            <performerId>p43</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-19T12:00:00</start>
+            <end>2026-04-19T12:50:00</end>
+            <description>Artist Talk with Electric Dust is part of the Sunday programme at Dune Arena.</description>
+        </event>
+        <event id="e44" type="dj-set">
+            <title>Crimson Lenses Live at Desert Pulse</title>
+            <performerId>p44</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-19T13:00:00</start>
+            <end>2026-04-19T13:50:00</end>
+            <description>Crimson Lenses Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e45" type="concert">
+            <title>The Slow Rockets Live at Desert Pulse</title>
+            <performerId>p45</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-19T14:00:00</start>
+            <end>2026-04-19T14:50:00</end>
+            <description>The Slow Rockets Live at Desert Pulse is part of the Sunday programme at Solar Stage.</description>
+        </event>
+        <event id="e46" type="workshop">
+            <title>Sundown Ritual Live at Desert Pulse</title>
+            <performerId>p46</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-19T15:00:00</start>
+            <end>2026-04-19T16:15:00</end>
+            <description>Sundown Ritual Live at Desert Pulse is part of the Sunday programme at Mirage Tent.</description>
+        </event>
+        <event id="e47" type="talk">
+            <title>Artist Talk with Indigo Outpost</title>
+            <performerId>p47</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-19T16:00:00</start>
+            <end>2026-04-19T16:50:00</end>
+            <description>Artist Talk with Indigo Outpost is part of the Sunday programme at Dune Arena.</description>
+        </event>
+        <event id="e48" type="dj-set">
+            <title>Aerial Sand Live at Desert Pulse</title>
+            <performerId>p48</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-19T17:00:00</start>
+            <end>2026-04-19T17:50:00</end>
+            <description>Aerial Sand Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e49" type="concert">
+            <title>Motel Aurora Live at Desert Pulse</title>
+            <performerId>p49</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-19T18:00:00</start>
+            <end>2026-04-19T18:50:00</end>
+            <description>Motel Aurora Live at Desert Pulse is part of the Sunday programme at Solar Stage.</description>
+        </event>
+        <event id="e50" type="workshop">
+            <title>Quartz Garden Live at Desert Pulse</title>
+            <performerId>p50</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-19T19:00:00</start>
+            <end>2026-04-19T20:15:00</end>
+            <description>Quartz Garden Live at Desert Pulse is part of the Sunday programme at Mirage Tent.</description>
+        </event>
+        <event id="e51" type="talk">
+            <title>Artist Talk with Morning Mirage</title>
+            <performerId>p51</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-19T10:30:00</start>
+            <end>2026-04-19T11:20:00</end>
+            <description>Artist Talk with Morning Mirage is part of the Sunday programme at Dune Arena.</description>
+        </event>
+        <event id="e52" type="dj-set">
+            <title>Velvet Monsoon Live at Desert Pulse</title>
+            <performerId>p52</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-19T11:30:00</start>
+            <end>2026-04-19T12:20:00</end>
+            <description>Velvet Monsoon Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e53" type="concert">
+            <title>Dream Circuit Live at Desert Pulse</title>
+            <performerId>p53</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-19T12:30:00</start>
+            <end>2026-04-19T13:20:00</end>
+            <description>Dream Circuit Live at Desert Pulse is part of the Sunday programme at Solar Stage.</description>
+        </event>
+        <event id="e54" type="workshop">
+            <title>The Bronze Keys Live at Desert Pulse</title>
+            <performerId>p54</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-19T13:30:00</start>
+            <end>2026-04-19T14:45:00</end>
+            <description>The Bronze Keys Live at Desert Pulse is part of the Sunday programme at Mirage Tent.</description>
+        </event>
+        <event id="e55" type="talk">
+            <title>Artist Talk with Night Saguaro</title>
+            <performerId>p55</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-19T14:30:00</start>
+            <end>2026-04-19T15:20:00</end>
+            <description>Artist Talk with Night Saguaro is part of the Sunday programme at Dune Arena.</description>
+        </event>
+        <event id="e56" type="dj-set">
+            <title>Canyon Lights Live at Desert Pulse</title>
+            <performerId>p56</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-19T15:30:00</start>
+            <end>2026-04-19T16:20:00</end>
+            <description>Canyon Lights Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome.</description>
+        </event>
+        <event id="e57" type="concert">
+            <title>Soft Volcano Live at Desert Pulse</title>
+            <performerId>p57</performerId>
+            <venueId>v1</venueId>
+            <start>2026-04-19T16:30:00</start>
+            <end>2026-04-19T17:20:00</end>
+            <description>Soft Volcano Live at Desert Pulse is part of the Sunday programme at Solar Stage.</description>
+        </event>
+        <event id="e58" type="workshop">
+            <title>Radio Mirage Live at Desert Pulse</title>
+            <performerId>p58</performerId>
+            <venueId>v2</venueId>
+            <start>2026-04-19T17:30:00</start>
+            <end>2026-04-19T18:45:00</end>
+            <description>Radio Mirage Live at Desert Pulse is part of the Sunday programme at Mirage Tent.</description>
+        </event>
+        <event id="e59" type="talk">
+            <title>Artist Talk with Golden Antenna</title>
+            <performerId>p59</performerId>
+            <venueId>v3</venueId>
+            <start>2026-04-19T18:30:00</start>
+            <end>2026-04-19T19:20:00</end>
+            <description>Artist Talk with Golden Antenna is part of the Sunday programme at Dune Arena.</description>
+        </event>
+        <event id="e60" type="dj-set">
+            <title>Luna Mesa Live at Desert Pulse</title>
+            <performerId>p60</performerId>
+            <venueId>v4</venueId>
+            <start>2026-04-19T19:30:00</start>
+            <end>2026-04-19T20:20:00</end>
+            <description>Luna Mesa Live at Desert Pulse is part of the Sunday programme at Oasis Workshop Dome.</description>
+        </event>
+    </programme>
+</festival>

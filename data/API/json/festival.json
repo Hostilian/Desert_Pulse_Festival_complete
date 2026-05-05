@@ -1,0 +1,16 @@
+{
+  "id": "desert-pulse-2026",
+  "name": "Desert Pulse Festival",
+  "year": 2026,
+  "edition": 1,
+  "location": "Solara Desert Park, Arizona, USA",
+  "startDate": "2026-04-17",
+  "endDate": "2026-04-19",
+  "description": "A fictional three-day desert music and arts festival combining indie, electronic, hip-hop, workshops, visual installations, and night-time desert experiences.",
+  "tickets": {
+    "url": "https://example.com/desert-pulse/tickets"
+  },
+  "links": {
+    "website": "https://example.com/desert-pulse"
+  }
+}

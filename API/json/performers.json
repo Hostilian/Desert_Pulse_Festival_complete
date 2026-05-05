@@ -1,0 +1,428 @@
+{
+  "items": [
+    {
+      "id": "p1",
+      "name": "Lunar Waves",
+      "genre": "Electronic",
+      "country": "USA",
+      "bio": "Lunar Waves brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p2",
+      "name": "Neon Horizon",
+      "genre": "Indie",
+      "country": "UK",
+      "bio": "Neon Horizon brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p3",
+      "name": "Desert Echo",
+      "genre": "Alternative",
+      "country": "Australia",
+      "bio": "Desert Echo brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p4",
+      "name": "Solar Nomads",
+      "genre": "Hip-Hop",
+      "country": "Canada",
+      "bio": "Solar Nomads brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p5",
+      "name": "Mirage Bloom",
+      "genre": "Experimental",
+      "country": "Germany",
+      "bio": "Mirage Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p6",
+      "name": "Crystal Coyote",
+      "genre": "Ambient",
+      "country": "France",
+      "bio": "Crystal Coyote brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p7",
+      "name": "Midnight Caravan",
+      "genre": "Synth-pop",
+      "country": "Mexico",
+      "bio": "Midnight Caravan brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p8",
+      "name": "Velvet Comet",
+      "genre": "World Fusion",
+      "country": "Spain",
+      "bio": "Velvet Comet brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p9",
+      "name": "Static Palms",
+      "genre": "Electronic",
+      "country": "Japan",
+      "bio": "Static Palms brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p10",
+      "name": "Golden Circuit",
+      "genre": "Indie",
+      "country": "Brazil",
+      "bio": "Golden Circuit brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p11",
+      "name": "Blue Ember",
+      "genre": "Alternative",
+      "country": "Netherlands",
+      "bio": "Blue Ember brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p12",
+      "name": "Dustline Choir",
+      "genre": "Hip-Hop",
+      "country": "Czech Republic",
+      "bio": "Dustline Choir brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p13",
+      "name": "Prism Jackals",
+      "genre": "Experimental",
+      "country": "USA",
+      "bio": "Prism Jackals brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p14",
+      "name": "Electric Saguaro",
+      "genre": "Ambient",
+      "country": "UK",
+      "bio": "Electric Saguaro brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p15",
+      "name": "The Sand Frequencies",
+      "genre": "Synth-pop",
+      "country": "Australia",
+      "bio": "The Sand Frequencies brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p16",
+      "name": "Nova Caravan",
+      "genre": "World Fusion",
+      "country": "Canada",
+      "bio": "Nova Caravan brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p17",
+      "name": "Amber Signals",
+      "genre": "Electronic",
+      "country": "Germany",
+      "bio": "Amber Signals brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p18",
+      "name": "Wild Mesa",
+      "genre": "Indie",
+      "country": "France",
+      "bio": "Wild Mesa brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p19",
+      "name": "Cactus Radio",
+      "genre": "Alternative",
+      "country": "Mexico",
+      "bio": "Cactus Radio brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p20",
+      "name": "Echo Atlas",
+      "genre": "Hip-Hop",
+      "country": "Spain",
+      "bio": "Echo Atlas brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p21",
+      "name": "Silver Mirage",
+      "genre": "Experimental",
+      "country": "Japan",
+      "bio": "Silver Mirage brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p22",
+      "name": "Sunset Operators",
+      "genre": "Ambient",
+      "country": "Brazil",
+      "bio": "Sunset Operators brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p23",
+      "name": "Moonlit Engines",
+      "genre": "Synth-pop",
+      "country": "Netherlands",
+      "bio": "Moonlit Engines brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p24",
+      "name": "The Heatwave Poets",
+      "genre": "World Fusion",
+      "country": "Czech Republic",
+      "bio": "The Heatwave Poets brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p25",
+      "name": "Neon Dunes",
+      "genre": "Electronic",
+      "country": "USA",
+      "bio": "Neon Dunes brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p26",
+      "name": "Paper Satellites",
+      "genre": "Indie",
+      "country": "UK",
+      "bio": "Paper Satellites brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p27",
+      "name": "Saffron Pulse",
+      "genre": "Alternative",
+      "country": "Australia",
+      "bio": "Saffron Pulse brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p28",
+      "name": "Violet Canyon",
+      "genre": "Hip-Hop",
+      "country": "Canada",
+      "bio": "Violet Canyon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p29",
+      "name": "Signal Bloom",
+      "genre": "Experimental",
+      "country": "Germany",
+      "bio": "Signal Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p30",
+      "name": "Solar Velvet",
+      "genre": "Ambient",
+      "country": "France",
+      "bio": "Solar Velvet brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p31",
+      "name": "The Distant Fires",
+      "genre": "Synth-pop",
+      "country": "Mexico",
+      "bio": "The Distant Fires brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p32",
+      "name": "Orbit Camp",
+      "genre": "World Fusion",
+      "country": "Spain",
+      "bio": "Orbit Camp brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p33",
+      "name": "Palm Static",
+      "genre": "Electronic",
+      "country": "Japan",
+      "bio": "Palm Static brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p34",
+      "name": "Cassia Run",
+      "genre": "Indie",
+      "country": "Brazil",
+      "bio": "Cassia Run brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p35",
+      "name": "Magnetic Nomads",
+      "genre": "Alternative",
+      "country": "Netherlands",
+      "bio": "Magnetic Nomads brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p36",
+      "name": "Afterglow Society",
+      "genre": "Hip-Hop",
+      "country": "Czech Republic",
+      "bio": "Afterglow Society brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p37",
+      "name": "River of Sparks",
+      "genre": "Experimental",
+      "country": "USA",
+      "bio": "River of Sparks brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p38",
+      "name": "Oasis Frequency",
+      "genre": "Ambient",
+      "country": "UK",
+      "bio": "Oasis Frequency brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p39",
+      "name": "Burning Halo",
+      "genre": "Synth-pop",
+      "country": "Australia",
+      "bio": "Burning Halo brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p40",
+      "name": "Mirage Archive",
+      "genre": "World Fusion",
+      "country": "Canada",
+      "bio": "Mirage Archive brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p41",
+      "name": "Horizon Kids",
+      "genre": "Electronic",
+      "country": "Germany",
+      "bio": "Horizon Kids brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p42",
+      "name": "Desert Bloomers",
+      "genre": "Indie",
+      "country": "France",
+      "bio": "Desert Bloomers brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p43",
+      "name": "Electric Dust",
+      "genre": "Alternative",
+      "country": "Mexico",
+      "bio": "Electric Dust brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p44",
+      "name": "Crimson Lenses",
+      "genre": "Hip-Hop",
+      "country": "Spain",
+      "bio": "Crimson Lenses brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p45",
+      "name": "The Slow Rockets",
+      "genre": "Experimental",
+      "country": "Japan",
+      "bio": "The Slow Rockets brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p46",
+      "name": "Sundown Ritual",
+      "genre": "Ambient",
+      "country": "Brazil",
+      "bio": "Sundown Ritual brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p47",
+      "name": "Indigo Outpost",
+      "genre": "Synth-pop",
+      "country": "Netherlands",
+      "bio": "Indigo Outpost brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p48",
+      "name": "Aerial Sand",
+      "genre": "World Fusion",
+      "country": "Czech Republic",
+      "bio": "Aerial Sand brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p49",
+      "name": "Motel Aurora",
+      "genre": "Electronic",
+      "country": "USA",
+      "bio": "Motel Aurora brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p50",
+      "name": "Quartz Garden",
+      "genre": "Indie",
+      "country": "UK",
+      "bio": "Quartz Garden brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p51",
+      "name": "Morning Mirage",
+      "genre": "Alternative",
+      "country": "Australia",
+      "bio": "Morning Mirage brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p52",
+      "name": "Velvet Monsoon",
+      "genre": "Hip-Hop",
+      "country": "Canada",
+      "bio": "Velvet Monsoon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p53",
+      "name": "Dream Circuit",
+      "genre": "Experimental",
+      "country": "Germany",
+      "bio": "Dream Circuit brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p54",
+      "name": "The Bronze Keys",
+      "genre": "Ambient",
+      "country": "France",
+      "bio": "The Bronze Keys brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p55",
+      "name": "Night Saguaro",
+      "genre": "Synth-pop",
+      "country": "Mexico",
+      "bio": "Night Saguaro brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p56",
+      "name": "Canyon Lights",
+      "genre": "World Fusion",
+      "country": "Spain",
+      "bio": "Canyon Lights brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p57",
+      "name": "Soft Volcano",
+      "genre": "Electronic",
+      "country": "Japan",
+      "bio": "Soft Volcano brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p58",
+      "name": "Radio Mirage",
+      "genre": "Indie",
+      "country": "Brazil",
+      "bio": "Radio Mirage brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p59",
+      "name": "Golden Antenna",
+      "genre": "Alternative",
+      "country": "Netherlands",
+      "bio": "Golden Antenna brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy."
+    },
+    {
+      "id": "p60",
+      "name": "Luna Mesa",
+      "genre": "Hip-Hop",
+      "country": "Czech Republic",
+      "bio": "Luna Mesa brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy."
+    }
+  ],
+  "count": 60,
+  "page": 1,
+  "pageSize": 20,
+  "totalPages": 3
+}
