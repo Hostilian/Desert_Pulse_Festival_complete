@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="info">
+<a class="skip-link" href="#content">Skip to content</a>
 <header class="site">
   <span class="brand">Desert Pulse</span>
   <nav aria-label="Primary">
@@ -25,7 +26,7 @@
   <button class="toggle" data-toggle-theme aria-label="Switch theme">Dawn</button>
 </header>
 
-<main>
+<main id="content">
   <section aria-labelledby="venues">
     <h1 id="venues">Practical information</h1>
     <p class="meta">Four venues spread across Solara Desert Park, plus accommodation, transport, and a packing checklist that remembers what you ticked.</p>
@@ -95,6 +96,7 @@
   <section aria-labelledby="pack">
     <h2 id="pack" class="reveal">Pack list</h2>
     <p class="meta">Tick what you've already packed - your selection is saved on this device.</p>
+    <p class="statline"><span class="pill" data-pack-progress>0/8 packed</span><button class="chip" type="button" data-clear-pack>Reset checklist</button></p>
     <ul class="checklist">
       <li><label><input type="checkbox" value="ticket"><span>Ticket (digital or printed)</span></label></li>
       <li><label><input type="checkbox" value="id"><span>Photo ID</span></label></li>
@@ -117,6 +119,7 @@
   <p>Desert Pulse Festival practical information page</p>
 </footer>
 
+<noscript><p>The checklist memory feature requires JavaScript. You can still use the static checklist manually.</p></noscript>
 <script src="app.js" defer></script>
 </body>
 </html>

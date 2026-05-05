@@ -59,6 +59,17 @@
   const safe = s => String(s).replace(/[<>&"]/g, c => ({ '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;' }[c]));
   const fmtTime = iso => new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   const dayLabel = iso => ({ '17':'Fri','18':'Sat','19':'Sun' }[iso.slice(8,10)] || iso.slice(0,10));
+  const setText = (selector, text) => {
+    const el = document.querySelector(selector);
+    if (el) el.textContent = text;
+  };
+  const params = new URLSearchParams(location.search);
+  const updateUrl = next => {
+    const p = new URLSearchParams(location.search);
+    Object.entries(next).forEach(([k, v]) => (v ? p.set(k, v) : p.delete(k)));
+    const q = p.toString();
+    history.replaceState(null, '', `${location.pathname}${q ? `?${q}` : ''}`);
+  };
 
   const page = document.body.dataset.page;
 
@@ -74,6 +85,8 @@
           <p class="meta">${safe(p.bio)}</p>
         </article>`).join('');
       slot.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      const pick = d.items[(Math.random() * d.items.length) | 0];
+      setText('[data-spotlight]', `${pick.name} (${pick.genre}, ${pick.country})`);
     }).catch(() => {});
   }
 
@@ -85,7 +98,11 @@
         const vmap = Object.fromEntries(ven.items.map(v => [v.id, v]));
         const list = document.querySelector('[data-events]');
         if (!list) return;
-        const state = { day: '17', venue: '', q: '' };
+        const state = {
+          day: ['17', '18', '19'].includes(params.get('day')) ? params.get('day') : '17',
+          venue: params.get('venue') || '',
+          q: (params.get('q') || '').toLowerCase()
+        };
         const render = () => {
           const rows = ev.items.filter(e => e.start.slice(8,10) === state.day)
             .filter(e => !state.venue || e.venueId === state.venue)
@@ -96,7 +113,12 @@
                      e.title.toLowerCase().includes(state.q);
             })
             .sort((a,b) => a.start.localeCompare(b.start));
-          if (!rows.length) { list.innerHTML = '<p class="meta">No events match these filters.</p>'; return; }
+          setText(
+            '[data-programme-status]',
+            `${rows.length} events for ${dayLabel(`2026-04-${state.day}`)}${state.venue ? `, ${vmap[state.venue]?.name || state.venue}` : ''}${state.q ? `, query "${state.q}"` : ''}.`
+          );
+          updateUrl({ day: state.day, venue: state.venue, q: state.q });
+          if (!rows.length) { list.innerHTML = '<p class="meta">No events match these filters. Try another day, venue, or search query.</p>'; return; }
           list.innerHTML = rows.map(e => {
             const p = pmap[e.performerId], v = vmap[e.venueId];
             return `<article class="card">
@@ -104,11 +126,12 @@
               <h3>${safe(e.title)}</h3>
               <p class="meta"><time datetime="${e.start}">${fmtTime(e.start)}</time> &ndash;
                 <time datetime="${e.end}">${fmtTime(e.end)}</time> &middot;
-                ${safe(v?.name || e.venueId)} &middot; ${safe(p?.genre || '')}</p>
+                ${safe(v?.name || e.venueId)} &middot; ${safe(p?.genre || '')} &middot; ${safe(p?.name || '')}</p>
             </article>`;
           }).join('');
         };
         document.querySelectorAll('[data-day-btn]').forEach(b => {
+          b.setAttribute('aria-pressed', b.dataset.dayBtn === state.day);
           b.addEventListener('click', () => {
             state.day = b.dataset.dayBtn;
             document.querySelectorAll('[data-day-btn]').forEach(x => x.setAttribute('aria-pressed', x === b));
@@ -119,6 +142,7 @@
         if (chips) {
           chips.innerHTML = '<button class="chip" aria-pressed="true" data-venue-btn="">All venues</button>' +
             ven.items.map(v => `<button class="chip" aria-pressed="false" data-venue-btn="${v.id}">${safe(v.name)}</button>`).join('');
+          chips.querySelectorAll('[data-venue-btn]').forEach(x => x.setAttribute('aria-pressed', x.dataset.venueBtn === state.venue));
           chips.addEventListener('click', e => {
             const b = e.target.closest('[data-venue-btn]'); if (!b) return;
             state.venue = b.dataset.venueBtn;
@@ -127,7 +151,19 @@
           });
         }
         const q = document.querySelector('[data-search]');
-        if (q) q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); render(); });
+        if (q) {
+          q.value = state.q;
+          q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); render(); });
+        }
+        const clear = document.querySelector('[data-clear-programme]');
+        if (clear) clear.addEventListener('click', () => {
+          state.day = '17'; state.venue = ''; state.q = '';
+          document.querySelectorAll('[data-day-btn]').forEach(x => x.setAttribute('aria-pressed', x.dataset.dayBtn === '17'));
+          const chipsEl = document.querySelector('[data-venue-chips]');
+          if (chipsEl) chipsEl.querySelectorAll('[data-venue-btn]').forEach((x, i) => x.setAttribute('aria-pressed', i === 0));
+          if (q) q.value = '';
+          render();
+        });
         render();
       }).catch(() => {});
   }
@@ -148,6 +184,8 @@
         const rows = d.items
           .filter(p => !state.genre || p.genre === state.genre)
           .filter(p => !state.q || p.name.toLowerCase().includes(state.q) || p.country.toLowerCase().includes(state.q));
+        setText('[data-performer-status]', `${rows.length} performers shown${state.genre ? ` in ${state.genre}` : ''}${state.q ? ` matching "${state.q}"` : ''}.`);
+        updateUrl({ genre: state.genre, q: state.q });
         grid.innerHTML = rows.length ? rows.map(p => `
           <article class="card" id="${p.id}" data-genre="${safe(p.genre)}">
             <span class="tag">${safe(p.country)}</span>
@@ -155,6 +193,13 @@
             <details><summary>Bio</summary><p class="meta">${safe(p.bio)}</p></details>
           </article>`).join('') : '<p class="meta">No performers match.</p>';
       };
+      const genreStats = document.querySelector('[data-genre-stats]');
+      if (genreStats) {
+        const counts = [...d.items.reduce((m, p) => m.set(p.genre, (m.get(p.genre) || 0) + 1), new Map()).entries()]
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 4);
+        genreStats.innerHTML = counts.map(([g, c]) => `<span class="pill">${safe(g)}: ${c}</span>`).join('');
+      }
       if (chips) chips.addEventListener('click', e => {
         const b = e.target.closest('[data-genre-btn]'); if (!b) return;
         state.genre = b.dataset.genreBtn;
@@ -162,7 +207,20 @@
         render();
       });
       const q = document.querySelector('[data-search]');
-      if (q) q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); render(); });
+      if (q) {
+        state.genre = params.get('genre') || '';
+        state.q = (params.get('q') || '').toLowerCase();
+        q.value = state.q;
+        q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); render(); });
+      }
+      if (chips) chips.querySelectorAll('[data-genre-btn]').forEach(x => x.setAttribute('aria-pressed', x.dataset.genreBtn === state.genre));
+      const clear = document.querySelector('[data-clear-performers]');
+      if (clear) clear.addEventListener('click', () => {
+        state.genre = ''; state.q = '';
+        if (q) q.value = '';
+        if (chips) chips.querySelectorAll('[data-genre-btn]').forEach((x, i) => x.setAttribute('aria-pressed', i === 0));
+        render();
+      });
       render();
     }).catch(() => {});
   }
@@ -180,10 +238,37 @@
           <address>${safe(v.area)}, Solara Desert Park, Arizona, USA</address>
         </article>`).join('');
     }).catch(() => {});
-    document.querySelectorAll('.checklist input').forEach(cb => {
+    const checks = [...document.querySelectorAll('.checklist input')];
+    const updatePack = () => {
+      const done = checks.filter(c => c.checked).length;
+      setText('[data-pack-progress]', `${done}/${checks.length} packed`);
+    };
+    checks.forEach(cb => {
       const k = 'dpf-pack-' + cb.value;
       if (localStorage.getItem(k) === '1') cb.checked = true;
-      cb.addEventListener('change', () => localStorage.setItem(k, cb.checked ? '1' : '0'));
+      cb.addEventListener('change', () => {
+        localStorage.setItem(k, cb.checked ? '1' : '0');
+        updatePack();
+      });
+    });
+    updatePack();
+    const clear = document.querySelector('[data-clear-pack]');
+    if (clear) clear.addEventListener('click', () => {
+      checks.forEach(c => {
+        c.checked = false;
+        localStorage.removeItem('dpf-pack-' + c.value);
+      });
+      updatePack();
+    });
+  }
+
+  const search = document.querySelector('input[type="search"]');
+  if (search) {
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== search) {
+        e.preventDefault();
+        search.focus();
+      }
     });
   }
 })();

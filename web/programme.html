@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="programme">
+<a class="skip-link" href="#content">Skip to content</a>
 <header class="site">
   <span class="brand">Desert Pulse</span>
   <nav aria-label="Primary">
@@ -25,7 +26,7 @@
   <button class="toggle" data-toggle-theme aria-label="Switch theme">Dawn</button>
 </header>
 
-<main>
+<main id="content">
   <section aria-labelledby="prog-title">
     <h1 id="prog-title">Programme</h1>
     <p class="meta">60 events across three days and four venues. Pick a day, filter by venue, or search by name.</p>
@@ -42,7 +43,9 @@
 
     <div class="toolbar">
       <input type="search" data-search placeholder="Search performer or event title..." aria-label="Search programme">
+      <button class="chip" type="button" data-clear-programme data-clear>Clear filters</button>
     </div>
+    <p class="statline" data-programme-status aria-live="polite">Loading live programme...</p>
 
     <div class="grid" data-events>
       <article class="card">
@@ -114,6 +117,7 @@
   }
 ]
 </script>
+<noscript><p>For the live day and venue filters, enable JavaScript. The static event list still shows sample programme entries.</p></noscript>
 <script src="app.js" defer></script>
 </body>
 </html>

@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="performers">
+<a class="skip-link" href="#content">Skip to content</a>
 <header class="site">
   <span class="brand">Desert Pulse</span>
   <nav aria-label="Primary">
@@ -25,7 +26,7 @@
   <button class="toggle" data-toggle-theme aria-label="Switch theme">Dawn</button>
 </header>
 
-<main>
+<main id="content">
   <section aria-labelledby="lineup">
     <h1 id="lineup">Lineup</h1>
     <p class="meta">60 performers across indie, electronic, hip-hop, alternative, ambient, synth-pop, world fusion and experimental music. Click any card to read the artist bio.</p>
@@ -36,7 +37,10 @@
 
     <div class="toolbar">
       <input type="search" data-search placeholder="Search by name or country..." aria-label="Search performers">
+      <button class="chip" type="button" data-clear-performers data-clear>Clear filters</button>
     </div>
+    <p class="statline" data-genre-stats aria-label="Top genres"></p>
+    <p class="statline" data-performer-status aria-live="polite">Loading lineup...</p>
 
     <div class="grid" data-performers>
       <article class="card" id="p1" data-genre="Electronic">
@@ -104,6 +108,7 @@
   ]
 }
 </script>
+<noscript><p>Search and genre filters require JavaScript. The fallback performer cards are still available below.</p></noscript>
 <script src="app.js" defer></script>
 </body>
 </html>
