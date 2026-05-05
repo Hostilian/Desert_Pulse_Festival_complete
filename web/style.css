@@ -50,6 +50,7 @@ p{margin:.4em 0}
 .chip{padding:.45rem .85rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:.85rem;transition:background .2s,color .2s}
 .chip[aria-pressed=true]{background:var(--ember);color:#fff;border-color:var(--ember)}
 .chip[data-clear]{border-style:dashed}
+.chip[data-active]{background:color-mix(in oklab,var(--ember) 28%,transparent);border-color:var(--ember)}
 .timeline{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
 .timeline li{position:relative;padding:.6rem .9rem .6rem 2.2rem;border:1px solid var(--line);border-radius:var(--r);background:color-mix(in oklab,var(--bg) 80%,#fff 5%)}
 .timeline li::before{content:"";position:absolute;left:.9rem;top:1.1rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px color-mix(in oklab,var(--ember) 30%,transparent)}
@@ -71,4 +72,5 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);border-top:1px sol
 code{background:color-mix(in oklab,var(--bg) 60%,#000 30%);padding:.15rem .4rem;border-radius:5px;font-size:.9em}
 address{font-style:normal;color:var(--muted)}
 noscript p{padding:.75rem 1rem;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
+.to-top{position:fixed;right:1rem;bottom:1rem;padding:.55rem .8rem;border:1px solid var(--line);border-radius:999px;background:color-mix(in oklab,var(--bg) 85%,#fff 5%);color:var(--fg);cursor:pointer;z-index:15}
 [hidden]{display:none!important}

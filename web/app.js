@@ -75,7 +75,7 @@
 
   /* ---------- HOME: featured performers ---------- */
   if (page === 'home') {
-    json('performers.json').then(d => {
+    Promise.all([json('performers.json'), json('events.json'), json('venues.json')]).then(([d, ev, ve]) => {
       const slot = document.querySelector('[data-featured]');
       if (!slot) return;
       slot.innerHTML = d.items.slice(0, 6).map(p => `
@@ -87,6 +87,8 @@
       slot.querySelectorAll('.reveal').forEach(el => io.observe(el));
       const pick = d.items[(Math.random() * d.items.length) | 0];
       setText('[data-spotlight]', `${pick.name} (${pick.genre}, ${pick.country})`);
+      const counts = document.querySelector('[data-live-counts]');
+      if (counts) counts.innerHTML = `<span class="pill">${d.count || d.items.length} performers</span><span class="pill">${ev.count || ev.items.length} events</span><span class="pill">${ve.count || ve.items.length} venues</span>`;
     }).catch(() => {});
   }
 
@@ -103,6 +105,7 @@
           venue: params.get('venue') || '',
           q: (params.get('q') || '').toLowerCase()
         };
+        let currentRows = [];
         const render = () => {
           const rows = ev.items.filter(e => e.start.slice(8,10) === state.day)
             .filter(e => !state.venue || e.venueId === state.venue)
@@ -113,6 +116,7 @@
                      e.title.toLowerCase().includes(state.q);
             })
             .sort((a,b) => a.start.localeCompare(b.start));
+          currentRows = rows;
           setText(
             '[data-programme-status]',
             `${rows.length} events for ${dayLabel(`2026-04-${state.day}`)}${state.venue ? `, ${vmap[state.venue]?.name || state.venue}` : ''}${state.q ? `, query "${state.q}"` : ''}.`
@@ -164,6 +168,19 @@
           if (q) q.value = '';
           render();
         });
+        const surprise = document.querySelector('[data-surprise-programme]');
+        if (surprise) surprise.addEventListener('click', () => {
+          if (!currentRows.length) return;
+          const event = currentRows[(Math.random() * currentRows.length) | 0];
+          const idx = currentRows.findIndex(x => x.id === event.id);
+          const cards = [...list.querySelectorAll('.card')];
+          const card = cards[idx];
+          if (!card) return;
+          cards.forEach(c => c.removeAttribute('data-active'));
+          card.setAttribute('data-active', 'true');
+          card.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+          setText('[data-programme-status]', `Surprise pick: ${event.title}`);
+        });
         render();
       }).catch(() => {});
   }
@@ -180,10 +197,12 @@
           genres.map(g => `<button class="chip" aria-pressed="false" data-genre-btn="${safe(g)}">${safe(g)}</button>`).join('');
       }
       const state = { genre: '', q: '' };
+      let currentRows = [];
       const render = () => {
         const rows = d.items
           .filter(p => !state.genre || p.genre === state.genre)
           .filter(p => !state.q || p.name.toLowerCase().includes(state.q) || p.country.toLowerCase().includes(state.q));
+        currentRows = rows;
         setText('[data-performer-status]', `${rows.length} performers shown${state.genre ? ` in ${state.genre}` : ''}${state.q ? ` matching "${state.q}"` : ''}.`);
         updateUrl({ genre: state.genre, q: state.q });
         grid.innerHTML = rows.length ? rows.map(p => `
@@ -220,6 +239,18 @@
         if (q) q.value = '';
         if (chips) chips.querySelectorAll('[data-genre-btn]').forEach((x, i) => x.setAttribute('aria-pressed', i === 0));
         render();
+      });
+      const shuffle = document.querySelector('[data-shuffle-performers]');
+      if (shuffle) shuffle.addEventListener('click', () => {
+        if (!currentRows.length) return;
+        const shuffled = [...currentRows].sort(() => Math.random() - 0.5);
+        grid.innerHTML = shuffled.map(p => `
+          <article class="card" id="${p.id}" data-genre="${safe(p.genre)}">
+            <span class="tag">${safe(p.country)}</span>
+            <h3>${safe(p.name)}</h3>
+            <details><summary>Bio</summary><p class="meta">${safe(p.bio)}</p></details>
+          </article>`).join('');
+        setText('[data-performer-status]', `Shuffled ${shuffled.length} performers${state.genre ? ` in ${state.genre}` : ''}.`);
       });
       render();
     }).catch(() => {});
@@ -271,4 +302,14 @@
       }
     });
   }
+
+  const toTop = document.createElement('button');
+  toTop.className = 'to-top';
+  toTop.type = 'button';
+  toTop.textContent = 'Top';
+  toTop.hidden = true;
+  toTop.setAttribute('aria-label', 'Back to top');
+  toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+  document.body.appendChild(toTop);
+  addEventListener('scroll', () => { toTop.hidden = scrollY < 420; }, { passive: true });
 })();
