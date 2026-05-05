@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <festival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="desert-pulse-2026" xsi:noNamespaceSchemaLocation="festival.xsd">
     <info>
         <name>Desert Pulse Festival</name>
@@ -46,361 +46,361 @@
             <name>Lunar Waves</name>
             <genre>Electronic</genre>
             <country>USA</country>
-            <bio>Lunar Waves brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Lunar Waves is a electronic project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p2">
             <name>Neon Horizon</name>
             <genre>Indie</genre>
             <country>UK</country>
-            <bio>Neon Horizon brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Neon Horizon is a indie project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p3">
             <name>Desert Echo</name>
             <genre>Alternative</genre>
             <country>Australia</country>
-            <bio>Desert Echo brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Desert Echo is a alternative project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p4">
             <name>Solar Nomads</name>
             <genre>Hip-Hop</genre>
             <country>Canada</country>
-            <bio>Solar Nomads brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Solar Nomads is a hip-hop project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p5">
             <name>Mirage Bloom</name>
             <genre>Experimental</genre>
             <country>Germany</country>
-            <bio>Mirage Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Mirage Bloom is a experimental project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p6">
             <name>Crystal Coyote</name>
             <genre>Ambient</genre>
             <country>France</country>
-            <bio>Crystal Coyote brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Crystal Coyote is a ambient project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p7">
             <name>Midnight Caravan</name>
             <genre>Synth-pop</genre>
             <country>Mexico</country>
-            <bio>Midnight Caravan brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Midnight Caravan is a synth-pop project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p8">
             <name>Velvet Comet</name>
             <genre>World Fusion</genre>
             <country>Spain</country>
-            <bio>Velvet Comet brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Velvet Comet is a world fusion project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p9">
             <name>Static Palms</name>
             <genre>Electronic</genre>
             <country>Japan</country>
-            <bio>Static Palms brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Static Palms is a electronic project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p10">
             <name>Golden Circuit</name>
             <genre>Indie</genre>
             <country>Brazil</country>
-            <bio>Golden Circuit brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Golden Circuit is a indie project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
         <performer id="p11">
             <name>Blue Ember</name>
             <genre>Alternative</genre>
             <country>Netherlands</country>
-            <bio>Blue Ember brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Blue Ember is a alternative project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p12">
             <name>Dustline Choir</name>
             <genre>Hip-Hop</genre>
             <country>Czech Republic</country>
-            <bio>Dustline Choir brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Dustline Choir is a hip-hop project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p13">
             <name>Prism Jackals</name>
             <genre>Experimental</genre>
             <country>USA</country>
-            <bio>Prism Jackals brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Prism Jackals is a experimental project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p14">
             <name>Electric Saguaro</name>
             <genre>Ambient</genre>
             <country>UK</country>
-            <bio>Electric Saguaro brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Electric Saguaro is a ambient project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p15">
             <name>The Sand Frequencies</name>
             <genre>Synth-pop</genre>
             <country>Australia</country>
-            <bio>The Sand Frequencies brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>The Sand Frequencies is a synth-pop project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p16">
             <name>Nova Caravan</name>
             <genre>World Fusion</genre>
             <country>Canada</country>
-            <bio>Nova Caravan brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Nova Caravan is a world fusion project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p17">
             <name>Amber Signals</name>
             <genre>Electronic</genre>
             <country>Germany</country>
-            <bio>Amber Signals brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Amber Signals is a electronic project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p18">
             <name>Wild Mesa</name>
             <genre>Indie</genre>
             <country>France</country>
-            <bio>Wild Mesa brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Wild Mesa is a indie project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p19">
             <name>Cactus Radio</name>
             <genre>Alternative</genre>
             <country>Mexico</country>
-            <bio>Cactus Radio brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Cactus Radio is a alternative project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p20">
             <name>Echo Atlas</name>
             <genre>Hip-Hop</genre>
             <country>Spain</country>
-            <bio>Echo Atlas brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Echo Atlas is a hip-hop project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
         <performer id="p21">
             <name>Silver Mirage</name>
             <genre>Experimental</genre>
             <country>Japan</country>
-            <bio>Silver Mirage brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Silver Mirage is a experimental project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p22">
             <name>Sunset Operators</name>
             <genre>Ambient</genre>
             <country>Brazil</country>
-            <bio>Sunset Operators brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Sunset Operators is a ambient project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p23">
             <name>Moonlit Engines</name>
             <genre>Synth-pop</genre>
             <country>Netherlands</country>
-            <bio>Moonlit Engines brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Moonlit Engines is a synth-pop project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p24">
             <name>The Heatwave Poets</name>
             <genre>World Fusion</genre>
             <country>Czech Republic</country>
-            <bio>The Heatwave Poets brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>The Heatwave Poets is a world fusion project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p25">
             <name>Neon Dunes</name>
             <genre>Electronic</genre>
             <country>USA</country>
-            <bio>Neon Dunes brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Neon Dunes is a electronic project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p26">
             <name>Paper Satellites</name>
             <genre>Indie</genre>
             <country>UK</country>
-            <bio>Paper Satellites brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Paper Satellites is a indie project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p27">
             <name>Saffron Pulse</name>
             <genre>Alternative</genre>
             <country>Australia</country>
-            <bio>Saffron Pulse brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Saffron Pulse is a alternative project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p28">
             <name>Violet Canyon</name>
             <genre>Hip-Hop</genre>
             <country>Canada</country>
-            <bio>Violet Canyon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Violet Canyon is a hip-hop project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p29">
             <name>Signal Bloom</name>
             <genre>Experimental</genre>
             <country>Germany</country>
-            <bio>Signal Bloom brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Signal Bloom is a experimental project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p30">
             <name>Solar Velvet</name>
             <genre>Ambient</genre>
             <country>France</country>
-            <bio>Solar Velvet brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Solar Velvet is a ambient project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
         <performer id="p31">
             <name>The Distant Fires</name>
             <genre>Synth-pop</genre>
             <country>Mexico</country>
-            <bio>The Distant Fires brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>The Distant Fires is a synth-pop project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p32">
             <name>Orbit Camp</name>
             <genre>World Fusion</genre>
             <country>Spain</country>
-            <bio>Orbit Camp brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Orbit Camp is a world fusion project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p33">
             <name>Palm Static</name>
             <genre>Electronic</genre>
             <country>Japan</country>
-            <bio>Palm Static brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Palm Static is a electronic project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p34">
             <name>Cassia Run</name>
             <genre>Indie</genre>
             <country>Brazil</country>
-            <bio>Cassia Run brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Cassia Run is a indie project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p35">
             <name>Magnetic Nomads</name>
             <genre>Alternative</genre>
             <country>Netherlands</country>
-            <bio>Magnetic Nomads brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Magnetic Nomads is a alternative project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p36">
             <name>Afterglow Society</name>
             <genre>Hip-Hop</genre>
             <country>Czech Republic</country>
-            <bio>Afterglow Society brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Afterglow Society is a hip-hop project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p37">
             <name>River of Sparks</name>
             <genre>Experimental</genre>
             <country>USA</country>
-            <bio>River of Sparks brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>River of Sparks is a experimental project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p38">
             <name>Oasis Frequency</name>
             <genre>Ambient</genre>
             <country>UK</country>
-            <bio>Oasis Frequency brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Oasis Frequency is a ambient project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p39">
             <name>Burning Halo</name>
             <genre>Synth-pop</genre>
             <country>Australia</country>
-            <bio>Burning Halo brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Burning Halo is a synth-pop project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p40">
             <name>Mirage Archive</name>
             <genre>World Fusion</genre>
             <country>Canada</country>
-            <bio>Mirage Archive brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Mirage Archive is a world fusion project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
         <performer id="p41">
             <name>Horizon Kids</name>
             <genre>Electronic</genre>
             <country>Germany</country>
-            <bio>Horizon Kids brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Horizon Kids is a electronic project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p42">
             <name>Desert Bloomers</name>
             <genre>Indie</genre>
             <country>France</country>
-            <bio>Desert Bloomers brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Desert Bloomers is a indie project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p43">
             <name>Electric Dust</name>
             <genre>Alternative</genre>
             <country>Mexico</country>
-            <bio>Electric Dust brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Electric Dust is a alternative project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p44">
             <name>Crimson Lenses</name>
             <genre>Hip-Hop</genre>
             <country>Spain</country>
-            <bio>Crimson Lenses brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Crimson Lenses is a hip-hop project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p45">
             <name>The Slow Rockets</name>
             <genre>Experimental</genre>
             <country>Japan</country>
-            <bio>The Slow Rockets brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>The Slow Rockets is a experimental project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p46">
             <name>Sundown Ritual</name>
             <genre>Ambient</genre>
             <country>Brazil</country>
-            <bio>Sundown Ritual brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Sundown Ritual is a ambient project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p47">
             <name>Indigo Outpost</name>
             <genre>Synth-pop</genre>
             <country>Netherlands</country>
-            <bio>Indigo Outpost brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Indigo Outpost is a synth-pop project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p48">
             <name>Aerial Sand</name>
             <genre>World Fusion</genre>
             <country>Czech Republic</country>
-            <bio>Aerial Sand brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Aerial Sand is a world fusion project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p49">
             <name>Motel Aurora</name>
             <genre>Electronic</genre>
             <country>USA</country>
-            <bio>Motel Aurora brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Motel Aurora is a electronic project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p50">
             <name>Quartz Garden</name>
             <genre>Indie</genre>
             <country>UK</country>
-            <bio>Quartz Garden brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Quartz Garden is a indie project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
         <performer id="p51">
             <name>Morning Mirage</name>
             <genre>Alternative</genre>
             <country>Australia</country>
-            <bio>Morning Mirage brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Morning Mirage is a alternative project that blends rhythmic sets with detailed live production.</bio>
         </performer>
         <performer id="p52">
             <name>Velvet Monsoon</name>
             <genre>Hip-Hop</genre>
             <country>Canada</country>
-            <bio>Velvet Monsoon brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Velvet Monsoon is a hip-hop project that focuses on dynamic stage energy and clean arrangements.</bio>
         </performer>
         <performer id="p53">
             <name>Dream Circuit</name>
             <genre>Experimental</genre>
             <country>Germany</country>
-            <bio>Dream Circuit brings a distinctive experimental sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Dream Circuit is a experimental project that mixes melodic hooks with festival-ready live performance.</bio>
         </performer>
         <performer id="p54">
             <name>The Bronze Keys</name>
             <genre>Ambient</genre>
             <country>France</country>
-            <bio>The Bronze Keys brings a distinctive ambient sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>The Bronze Keys is a ambient project that builds atmosphere through layered instrumentation and timing.</bio>
         </performer>
         <performer id="p55">
             <name>Night Saguaro</name>
             <genre>Synth-pop</genre>
             <country>Mexico</country>
-            <bio>Night Saguaro brings a distinctive synth-pop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Night Saguaro is a synth-pop project that delivers a set shaped for outdoor festival stages.</bio>
         </performer>
         <performer id="p56">
             <name>Canyon Lights</name>
             <genre>World Fusion</genre>
             <country>Spain</country>
-            <bio>Canyon Lights brings a distinctive world fusion sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Canyon Lights is a world fusion project that combines tight structure with spontaneous live moments.</bio>
         </performer>
         <performer id="p57">
             <name>Soft Volcano</name>
             <genre>Electronic</genre>
             <country>Japan</country>
-            <bio>Soft Volcano brings a distinctive electronic sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Soft Volcano is a electronic project that leans on groove-driven transitions and strong pacing.</bio>
         </performer>
         <performer id="p58">
             <name>Radio Mirage</name>
             <genre>Indie</genre>
             <country>Brazil</country>
-            <bio>Radio Mirage brings a distinctive indie sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Radio Mirage is a indie project that pairs genre roots with a modern live approach.</bio>
         </performer>
         <performer id="p59">
             <name>Golden Antenna</name>
             <genre>Alternative</genre>
             <country>Netherlands</country>
-            <bio>Golden Antenna brings a distinctive alternative sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Golden Antenna is a alternative project that keeps a clear sound profile with audience-focused flow.</bio>
         </performer>
         <performer id="p60">
             <name>Luna Mesa</name>
             <genre>Hip-Hop</genre>
             <country>Czech Republic</country>
-            <bio>Luna Mesa brings a distinctive hip-hop sound to the desert, mixing live performance with immersive festival energy.</bio>
+            <bio>Luna Mesa is a hip-hop project that moves between introspective passages and high-energy peaks.</bio>
         </performer>
     </performers>
     <programme>

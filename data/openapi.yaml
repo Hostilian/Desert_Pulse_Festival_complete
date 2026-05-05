@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Desert Pulse Festival API
   version: 1.0.0
-  description: Static REST-style API specification generated from the Desert Pulse Festival XML data.
+  description: Static REST-style API specification based on the Desert Pulse Festival XML data.
 servers:
   - url: https://example.com
 paths:

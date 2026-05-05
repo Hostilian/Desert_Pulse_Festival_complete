@@ -1,20 +1,20 @@
-# Desert Pulse Festival – Specification
+# Desert Pulse Festival - Specification
 
 ## Basic Festival Identity
-Festival Name: Desert Pulse Festival  
-Edition: 1st Edition  
+Festival name: Desert Pulse Festival  
+Edition: 1st edition  
 Year: 2026  
 Location: Solara Desert Park, Arizona, USA  
-Dates: April 17–19, 2026  
+Dates: 17-19 April 2026
 
-Desert Pulse Festival is a three-day music and arts festival inspired by desert culture and modern global music. The festival combines live concerts, visual art installations, workshops, and cultural talks.
+Desert Pulse Festival is a fictional three-day event focused on music and visual culture. The programme combines concerts, DJ sets, talks, and workshops in a desert setting.
 
 ## Target Audience
-The festival is aimed at:
-- young adults (18–35)
-- music fans interested in indie, electronic, hip-hop and alternative music
-- visitors who enjoy art, design and creative experiences
-- international tourists and local culture enthusiasts
+The festival is designed for:
+- young adults (18-35)
+- listeners interested in indie, electronic, hip-hop, and alternative music
+- visitors who like art, design, and workshop formats
+- both international visitors and local attendees
 
 ## Festival Character
 Main genres:
@@ -25,45 +25,43 @@ Main genres:
 - Experimental
 
 Additional activities:
-- visual art exhibitions
-- creative workshops
-- talks with artists and producers
+- visual installations
+- practical workshops
+- artist and producer talks
 
 ## Website Structure
 
 ### 1. Home Page
-- introduction to the festival
-- highlight performers
-- festival description
-- links to programme and tickets
+- festival introduction
+- short concept summary
+- highlighted performers
+- links to programme and practical information
 
 ### 2. Programme
-- schedule by day
-- events with time and stage
-- filters by performer and venue
+- schedule grouped by day
+- event time and venue details
+- references to filters used in the API (`day`, `venueId`, `performerId`)
 
 ### 3. Performers
 - performer list
-- performer detail pages
-- genre and country
+- selected performer detail blocks
+- genre and country information
 
 ### 4. Practical Information
-- venue location
-- accommodation tips
-- parking and transportation
-- festival rules
+- venue overview and addresses
+- accommodation options
+- parking and transport notes
+- basic visitor rules
 
 ## Data Entities
-
-The XML data structure contains:
-
-- festival (general information)
+The XML model includes:
+- festival information
 - venues/stages
 - performers
 - programme items (events)
 
-Minimum dataset requirements:
-- 3 festival days
-- 2+ venues
-- 60+ performers
-- 60+ programme events
+Minimum planned dataset:
+- at least 3 festival days
+- at least 2 venues
+- at least 60 performers
+- at least 60 events
