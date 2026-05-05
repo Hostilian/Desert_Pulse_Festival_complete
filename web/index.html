@@ -3,69 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desert Pulse Festival</title>
-<meta name="description" content="Desert Pulse Festival is a fictional three-day event in Arizona with concerts, talks, and workshops.">
-<meta property="og:title" content="Desert Pulse Festival">
-<meta property="og:description" content="Three days of music, art, talks, and workshops in Solara Desert Park.">
-<meta property="og:image" content="https://picsum.photos/1200/630">
+<title>Desert Pulse Festival 2026</title>
+<meta name="description" content="Desert Pulse Festival is a fictional three-day event in Arizona with concerts, talks, and workshops. 17-19 April 2026 at Solara Desert Park.">
+<meta name="theme-color" content="#1a0f2b">
+<meta property="og:title" content="Desert Pulse Festival 2026">
+<meta property="og:description" content="Three days of music, art, talks, and workshops in Solara Desert Park, Arizona.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://picsum.photos/seed/desertpulse/1200/630">
+<meta property="og:url" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ff6a3d'/%3E%3C/svg%3E">
 </head>
-<body>
-<header>
-<h1>Desert Pulse Festival 2026</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="programme.html">Programme</a>
-<a href="performers.html">Performers</a>
-<a href="info.html">Practical information</a>
-</nav>
+<body data-page="home">
+<header class="site">
+  <span class="brand">Desert Pulse</span>
+  <nav aria-label="Primary">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="programme.html">Programme</a>
+    <a href="performers.html">Performers</a>
+    <a href="info.html">Info</a>
+  </nav>
+  <button class="toggle" data-toggle-theme aria-label="Switch theme">Dawn</button>
 </header>
+
 <main>
-<section class="hero">
-<img src="https://picsum.photos/900/360" alt="Festival lights in a desert night scene">
-<h2>Music and art in the desert</h2>
-<p>
-Desert Pulse runs from
-<time datetime="2026-04-17">17 April 2026</time>
-to
-<time datetime="2026-04-19">19 April 2026</time>.
-</p>
-<a class="button" href="programme.html">See programme</a>
-</section>
-<section>
-<h2>What to expect</h2>
-<article>
-<h3>Wide music mix</h3>
-<p>Indie, electronic, hip-hop, ambient, and experimental artists share the same weekend lineup.</p>
-</article>
-<article>
-<h3>More than concerts</h3>
-<p>The schedule also includes talks, workshops, and visual installations across the venue area.</p>
-</article>
-<article>
-<h3>Festival atmosphere</h3>
-<p>The project is built around a relaxed outdoor setting and a strong focus on discovery.</p>
-</article>
-</section>
-<section>
-<h2>Plan your visit</h2>
-<p>Before arrival, check transport, parking, and venue details.</p>
-<ul>
-<li><a href="info.html">Practical information</a></li>
-<li><a href="programme.html">Programme by day and venue</a></li>
-</ul>
-</section>
-<aside>
-<h2>Data links</h2>
-<ul>
-<li><a href="../data/API/json/festival.json">GET /api/festival</a></li>
-<li><a href="../data/API/json/events.json">GET /api/events</a></li>
-</ul>
-</aside>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="meta">17 - 19 April 2026 &middot; Solara Desert Park, Arizona</p>
+    <h1 id="hero-title">A pulse in the desert.</h1>
+    <p class="lede">Three days of indie, electronic, hip-hop, and experimental sound across four open-air venues. Plus talks, workshops, and visual installations under a wide desert sky.</p>
+    <div class="countdown" data-countdown aria-live="polite">
+      <div><b>--</b><span>days</span></div>
+      <div><b>--</b><span>hours</span></div>
+      <div><b>--</b><span>min</span></div>
+      <div><b>--</b><span>sec</span></div>
+    </div>
+    <p><a class="button" href="programme.html">See the programme</a></p>
+    <svg viewBox="0 0 1200 220" aria-hidden="true" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="dune1" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#ff6a3d" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#ff6a3d" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,160 C200,90 380,200 600,140 C820,80 1000,180 1200,120 L1200,220 L0,220 Z" fill="url(#dune1)"/>
+      <path d="M0,190 C220,140 420,210 640,170 C860,130 1040,200 1200,160 L1200,220 L0,220 Z" fill="#0c0617" opacity=".7"/>
+    </svg>
+  </section>
+
+  <section aria-labelledby="why">
+    <h2 id="why" class="reveal">What to expect</h2>
+    <div class="grid">
+      <article class="card reveal">
+        <span class="tag">Sound</span>
+        <h3>Wide music mix</h3>
+        <p>Indie, electronic, hip-hop, ambient, and experimental artists share the same weekend lineup across four venues.</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag">More</span>
+        <h3>Beyond the stage</h3>
+        <p>Talks, workshops, and visual installations run in parallel with concerts so there is always something to wander into.</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Place</span>
+        <h3>Desert atmosphere</h3>
+        <p>An open-air setting in Solara Desert Park - a relaxed, discovery-oriented festival format under a wide sky.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="featured">
+    <h2 id="featured" class="reveal">Featured performers</h2>
+    <p class="meta">Six highlights from a full lineup of sixty artists. Loaded live from the festival JSON API.</p>
+    <div class="grid" data-featured>
+      <article class="card"><span class="tag">USA</span><h3>Lunar Waves</h3><p class="meta">Electronic - layered synth textures and strong rhythmic sets.</p></article>
+      <article class="card"><span class="tag">UK</span><h3>Neon Horizon</h3><p class="meta">Indie - guitar-driven songs with atmospheric arrangements.</p></article>
+      <article class="card"><span class="tag">Australia</span><h3>Desert Echo</h3><p class="meta">Alternative - alt-rock structure with cinematic sound design.</p></article>
+    </div>
+    <p style="margin-top:1rem"><a href="performers.html">See all 60 performers &rarr;</a></p>
+  </section>
+
+  <section aria-labelledby="plan">
+    <h2 id="plan" class="reveal">Plan your visit</h2>
+    <p>Before arrival, check transport, parking, and venue details.</p>
+    <ul>
+      <li><a href="info.html">Practical information</a></li>
+      <li><a href="programme.html">Programme by day and venue</a></li>
+    </ul>
+  </section>
+
+  <aside aria-labelledby="api">
+    <h2 id="api">Data &amp; API</h2>
+    <p class="meta">The site is built on top of an XML dataset (<code>data/festival.xml</code>) transformed via XSLT into JSON endpoints described in OpenAPI.</p>
+    <ul>
+      <li><a href="data/API/json/festival.json">GET /api/festival</a></li>
+      <li><a href="data/API/json/events.json">GET /api/events</a></li>
+      <li><a href="data/API/json/performers.json">GET /api/performers</a></li>
+      <li><a href="data/API/json/venues.json">GET /api/venues</a></li>
+      <li><a href="data/openapi.yaml">OpenAPI specification</a></li>
+    </ul>
+  </aside>
 </main>
+
 <footer>
-<p>&copy; 2026 Desert Pulse Festival. Student project.</p>
+  <p>&copy; 2026 Desert Pulse Festival &middot; Student project &middot; Markup Languages course</p>
 </footer>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,14 +116,22 @@ to
   "name": "Desert Pulse Festival",
   "startDate": "2026-04-17",
   "endDate": "2026-04-19",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
     "name": "Solara Desert Park",
-    "address": "Arizona, USA"
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Arizona",
+      "addressCountry": "USA"
+    }
   },
-  "description": "A fictional festival with music, talks, workshops, and visual art in a desert setting.",
-  "image": "https://picsum.photos/1200/630"
+  "description": "A fictional three-day festival of music, talks, workshops, and visual art in a desert setting.",
+  "image": "https://picsum.photos/seed/desertpulse/1200/630",
+  "url": "https://hostilian.github.io/Desert_Pulse_Festival_complete/"
 }
 </script>
+<script src="app.js" defer></script>
 </body>
 </html>

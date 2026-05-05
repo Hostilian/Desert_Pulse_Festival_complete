@@ -4,82 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programme | Desert Pulse Festival</title>
-<meta name="description" content="Daily programme overview for Desert Pulse Festival with sample events and API references.">
+<meta name="description" content="Full three-day programme of Desert Pulse Festival - filterable by day, venue, and performer. Built from the festival JSON API.">
+<meta name="theme-color" content="#1a0f2b">
 <meta property="og:title" content="Programme | Desert Pulse Festival">
-<meta property="og:description" content="Schedule highlights for all three festival days.">
-<meta property="og:image" content="https://picsum.photos/1200/630">
+<meta property="og:description" content="60 events across three days and four venues - filter and search the lineup.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://picsum.photos/seed/desertpulse-programme/1200/630">
+<meta property="og:url" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/programme.html">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header>
-<h1>Programme</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="programme.html">Programme</a>
-<a href="performers.html">Performers</a>
-<a href="info.html">Practical information</a>
-</nav>
+<body data-page="programme">
+<header class="site">
+  <span class="brand">Desert Pulse</span>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="programme.html" aria-current="page">Programme</a>
+    <a href="performers.html">Performers</a>
+    <a href="info.html">Info</a>
+  </nav>
+  <button class="toggle" data-toggle-theme aria-label="Switch theme">Dawn</button>
 </header>
+
 <main>
-<section>
-<h2>Overview</h2>
-<p>The full XML dataset contains 60 events over three days. This page shows selected entries from day one.</p>
-<ul>
-<li>Main filter in API: <code>day</code></li>
-<li>Additional filter: <code>venueId</code></li>
-<li>Additional filter: <code>performerId</code></li>
-</ul>
-</section>
-<section>
-<h2>Selected events</h2>
-<article>
-<h3>Lunar Waves Live at Desert Pulse</h3>
-<p><time datetime="2026-04-17T10:00:00">17 Apr 2026, 10:00</time> - <time datetime="2026-04-17T10:50:00">10:50</time>, venue <a href="info.html#v1">v1</a>, performer <a href="performers.html#p1">p1</a>.</p>
-</article>
-<article>
-<h3>Neon Horizon Live at Desert Pulse</h3>
-<p><time datetime="2026-04-17T11:00:00">17 Apr 2026, 11:00</time> - <time datetime="2026-04-17T12:15:00">12:15</time>, venue <a href="info.html#v2">v2</a>, performer <a href="performers.html#p2">p2</a>.</p>
-</article>
-<article>
-<h3>Artist Talk with Desert Echo</h3>
-<p><time datetime="2026-04-17T12:00:00">17 Apr 2026, 12:00</time> - <time datetime="2026-04-17T12:50:00">12:50</time>, venue <a href="info.html#v3">v3</a>, performer <a href="performers.html#p3">p3</a>.</p>
-</article>
-<article>
-<h3>Solar Nomads Live at Desert Pulse</h3>
-<p><time datetime="2026-04-17T13:00:00">17 Apr 2026, 13:00</time> - <time datetime="2026-04-17T13:50:00">13:50</time>, venue <a href="info.html#v4">v4</a>, performer <a href="performers.html#p4">p4</a>.</p>
-</article>
-</section>
-<section>
-<h2>API examples</h2>
-<ul>
-<li><a href="../data/API/json/events.json">GET /api/events</a></li>
-<li><a href="../data/API/json/event-e1.json">GET /api/events/{id}</a></li>
-</ul>
-</section>
-<aside>
-<h2>Endpoint note</h2>
-<p>This page reflects the list and detail event outputs built from `festival.xml`.</p>
-</aside>
+  <section aria-labelledby="prog-title">
+    <h1 id="prog-title">Programme</h1>
+    <p class="meta">60 events across three days and four venues. Pick a day, filter by venue, or search by name.</p>
+
+    <div class="toolbar" role="tablist" aria-label="Festival day">
+      <button class="chip" role="tab" aria-pressed="true"  data-day-btn="17">Fri 17 Apr</button>
+      <button class="chip" role="tab" aria-pressed="false" data-day-btn="18">Sat 18 Apr</button>
+      <button class="chip" role="tab" aria-pressed="false" data-day-btn="19">Sun 19 Apr</button>
+    </div>
+
+    <div class="toolbar" data-venue-chips aria-label="Filter by venue">
+      <button class="chip" aria-pressed="true" data-venue-btn="">All venues</button>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" data-search placeholder="Search performer or event title..." aria-label="Search programme">
+    </div>
+
+    <div class="grid" data-events>
+      <article class="card">
+        <span class="tag">concert</span>
+        <h3>Lunar Waves Live at Desert Pulse</h3>
+        <p class="meta"><time datetime="2026-04-17T10:00:00">10:00</time> &ndash; <time datetime="2026-04-17T10:50:00">10:50</time> &middot; Solar Stage &middot; Electronic</p>
+      </article>
+      <article class="card">
+        <span class="tag">workshop</span>
+        <h3>Neon Horizon Live at Desert Pulse</h3>
+        <p class="meta"><time datetime="2026-04-17T11:00:00">11:00</time> &ndash; <time datetime="2026-04-17T12:15:00">12:15</time> &middot; Mirage Tent &middot; Indie</p>
+      </article>
+      <article class="card">
+        <span class="tag">talk</span>
+        <h3>Artist Talk with Desert Echo</h3>
+        <p class="meta"><time datetime="2026-04-17T12:00:00">12:00</time> &ndash; <time datetime="2026-04-17T12:50:00">12:50</time> &middot; Dune Arena &middot; Alternative</p>
+      </article>
+      <article class="card">
+        <span class="tag">dj-set</span>
+        <h3>Solar Nomads Live at Desert Pulse</h3>
+        <p class="meta"><time datetime="2026-04-17T13:00:00">13:00</time> &ndash; <time datetime="2026-04-17T13:50:00">13:50</time> &middot; Oasis Workshop Dome &middot; Hip-Hop</p>
+      </article>
+    </div>
+  </section>
+
+  <aside aria-labelledby="api-note">
+    <h2 id="api-note">API filters used here</h2>
+    <ul>
+      <li><code>day</code> - filter by festival day</li>
+      <li><code>venueId</code> - filter by venue identifier</li>
+      <li><code>performerId</code> - filter by performer identifier</li>
+    </ul>
+    <p class="meta">See <a href="data/API/json/events.json">GET /api/events</a> and <a href="data/openapi.yaml">openapi.yaml</a>.</p>
+  </aside>
 </main>
+
 <footer>
-<p>Desert Pulse Festival programme page.</p>
+  <p>Desert Pulse Festival programme page</p>
 </footer>
+
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  "name": "Lunar Waves Live at Desert Pulse",
-  "startDate": "2026-04-17T10:00:00",
-  "endDate": "2026-04-17T10:50:00",
-  "location": {
-    "@type": "Place",
-    "name": "Solar Stage"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "Lunar Waves Live at Desert Pulse",
+    "startDate": "2026-04-17T10:00:00",
+    "endDate": "2026-04-17T10:50:00",
+    "location": { "@type": "Place", "name": "Solar Stage" },
+    "performer": { "@type": "MusicGroup", "name": "Lunar Waves" }
   },
-  "performer": {
-    "@type": "MusicGroup",
-    "name": "Lunar Waves"
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "Neon Horizon Live at Desert Pulse",
+    "startDate": "2026-04-18T19:00:00",
+    "endDate": "2026-04-18T20:00:00",
+    "location": { "@type": "Place", "name": "Mirage Tent" },
+    "performer": { "@type": "MusicGroup", "name": "Neon Horizon" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "Echo Atlas Live at Desert Pulse",
+    "startDate": "2026-04-19T21:00:00",
+    "endDate": "2026-04-19T22:00:00",
+    "location": { "@type": "Place", "name": "Oasis Workshop Dome" },
+    "performer": { "@type": "MusicGroup", "name": "Echo Atlas" }
   }
-}
+]
 </script>
+<script src="app.js" defer></script>
 </body>
 </html>
