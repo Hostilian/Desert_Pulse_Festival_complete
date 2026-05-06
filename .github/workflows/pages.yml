@@ -136,6 +136,7 @@ jobs:
           node - <<'EOF'
           const fs = require('node:fs');
           const path = require('node:path');
+          const repoRoot = path.resolve('.');
           const base = path.resolve('web');
           const pages = ['index.html', 'programme.html', 'performers.html', 'info.html'];
           const attrRegex = /(href|src)\s*=\s*"([^"]+)"/g;
@@ -143,14 +144,18 @@ jobs:
           for (const page of pages) {
             const full = path.join(base, page);
             const html = fs.readFileSync(full, 'utf8');
+            const pageDir = path.dirname(full);
             let m;
             while ((m = attrRegex.exec(html))) {
               const target = m[2].trim();
               if (!target || target.startsWith('http') || target.startsWith('data:') || target.startsWith('#') || target.startsWith('mailto:')) continue;
               const clean = target.split('?')[0].split('#')[0];
               if (!clean) continue;
-              const resolved = path.resolve(base, clean);
-              if (!fs.existsSync(resolved)) missing.push(`${page} -> ${clean}`);
+              const resolvedFromPage = path.resolve(pageDir, clean);
+              const resolvedFromRepoRoot = path.resolve(repoRoot, clean);
+              if (!fs.existsSync(resolvedFromPage) && !fs.existsSync(resolvedFromRepoRoot)) {
+                missing.push(`${page} -> ${clean}`);
+              }
             }
           }
           if (missing.length) {
