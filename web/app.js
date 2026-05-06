@@ -59,10 +59,33 @@
   const safe = s => String(s).replace(/[<>&"]/g, c => ({ '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;' }[c]));
   const fmtTime = iso => new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   const dayLabel = iso => ({ '17':'Fri','18':'Sat','19':'Sun' }[iso.slice(8,10)] || iso.slice(0,10));
+  const renderError = (slot, message) => {
+    if (slot) slot.innerHTML = `<p class="meta">${safe(message)}</p>`;
+  };
   const setText = (selector, text) => {
     const el = document.querySelector(selector);
     if (el) el.textContent = text;
   };
+  const renderPerformerCard = p => `
+    <article class="card" id="${safe(p.id)}" data-genre="${safe(p.genre)}">
+      <span class="tag">${safe(p.country)}</span>
+      <h3>${safe(p.name)}</h3>
+      <details><summary>Bio</summary><p class="meta">${safe(p.bio)}</p></details>
+    </article>`;
+  const renderVenueCard = v => `
+    <article class="card" id="${safe(v.id)}">
+      <span class="tag">cap. ${Number(v.capacity).toLocaleString()}</span>
+      <h3>${safe(v.name)}</h3>
+      <p class="meta">${safe(v.description)}</p>
+      <address>${safe(v.area)}, Solara Desert Park, Arizona, USA</address>
+    </article>`;
+  const renderEventCard = (e, p, v) => `<article class="card">
+    <span class="tag">${safe(e.type)}</span>
+    <h3>${safe(e.title)}</h3>
+    <p class="meta"><time datetime="${safe(e.start)}">${fmtTime(e.start)}</time> &ndash;
+      <time datetime="${safe(e.end)}">${fmtTime(e.end)}</time> &middot;
+      ${safe(v?.name || e.venueId)} &middot; ${safe(p?.genre || '')} &middot; ${safe(p?.name || '')}</p>
+  </article>`;
   const params = new URLSearchParams(location.search);
   const updateUrl = next => {
     const p = new URLSearchParams(location.search);
@@ -85,11 +108,14 @@
           <p class="meta">${safe(p.bio)}</p>
         </article>`).join('');
       slot.querySelectorAll('.reveal').forEach(el => io.observe(el));
-      const pick = d.items[(Math.random() * d.items.length) | 0];
-      setText('[data-spotlight]', `${pick.name} (${pick.genre}, ${pick.country})`);
+      const pick = d.items.length ? d.items[(Math.random() * d.items.length) | 0] : null;
+      if (pick) setText('[data-spotlight]', `${pick.name} (${pick.genre}, ${pick.country})`);
       const counts = document.querySelector('[data-live-counts]');
       if (counts) counts.innerHTML = `<span class="pill">${d.count || d.items.length} performers</span><span class="pill">${ev.count || ev.items.length} events</span><span class="pill">${ve.count || ve.items.length} venues</span>`;
-    }).catch(() => {});
+    }).catch(() => {
+      renderError(document.querySelector('[data-featured]'), 'Featured performers are temporarily unavailable.');
+      setText('[data-live-counts]', 'Live dataset unavailable right now.');
+    });
   }
 
   /* ---------- PROGRAMME: day tabs + venue chips + search ---------- */
@@ -123,22 +149,19 @@
           );
           updateUrl({ day: state.day, venue: state.venue, q: state.q });
           if (!rows.length) { list.innerHTML = '<p class="meta">No events match these filters. Try another day, venue, or search query.</p>'; return; }
-          list.innerHTML = rows.map(e => {
-            const p = pmap[e.performerId], v = vmap[e.venueId];
-            return `<article class="card">
-              <span class="tag">${safe(e.type)}</span>
-              <h3>${safe(e.title)}</h3>
-              <p class="meta"><time datetime="${e.start}">${fmtTime(e.start)}</time> &ndash;
-                <time datetime="${e.end}">${fmtTime(e.end)}</time> &middot;
-                ${safe(v?.name || e.venueId)} &middot; ${safe(p?.genre || '')} &middot; ${safe(p?.name || '')}</p>
-            </article>`;
-          }).join('');
+          list.innerHTML = rows.map(e => renderEventCard(e, pmap[e.performerId], vmap[e.venueId])).join('');
         };
         document.querySelectorAll('[data-day-btn]').forEach(b => {
-          b.setAttribute('aria-pressed', b.dataset.dayBtn === state.day);
+          const active = b.dataset.dayBtn === state.day;
+          b.setAttribute('aria-selected', active);
+          b.setAttribute('tabindex', active ? '0' : '-1');
           b.addEventListener('click', () => {
             state.day = b.dataset.dayBtn;
-            document.querySelectorAll('[data-day-btn]').forEach(x => x.setAttribute('aria-pressed', x === b));
+            document.querySelectorAll('[data-day-btn]').forEach(x => {
+              const selected = x === b;
+              x.setAttribute('aria-selected', selected);
+              x.setAttribute('tabindex', selected ? '0' : '-1');
+            });
             render();
           });
         });
@@ -162,7 +185,11 @@
         const clear = document.querySelector('[data-clear-programme]');
         if (clear) clear.addEventListener('click', () => {
           state.day = '17'; state.venue = ''; state.q = '';
-          document.querySelectorAll('[data-day-btn]').forEach(x => x.setAttribute('aria-pressed', x.dataset.dayBtn === '17'));
+          document.querySelectorAll('[data-day-btn]').forEach(x => {
+            const active = x.dataset.dayBtn === '17';
+            x.setAttribute('aria-selected', active);
+            x.setAttribute('tabindex', active ? '0' : '-1');
+          });
           const chipsEl = document.querySelector('[data-venue-chips]');
           if (chipsEl) chipsEl.querySelectorAll('[data-venue-btn]').forEach((x, i) => x.setAttribute('aria-pressed', i === 0));
           if (q) q.value = '';
@@ -182,7 +209,10 @@
           setText('[data-programme-status]', `Surprise pick: ${event.title}`);
         });
         render();
-      }).catch(() => {});
+      }).catch(() => {
+        renderError(document.querySelector('[data-events]'), 'Programme data could not be loaded right now.');
+        setText('[data-programme-status]', 'Programme currently unavailable.');
+      });
   }
 
   /* ---------- PERFORMERS: search + genre chips + grid ---------- */
@@ -205,12 +235,7 @@
         currentRows = rows;
         setText('[data-performer-status]', `${rows.length} performers shown${state.genre ? ` in ${state.genre}` : ''}${state.q ? ` matching "${state.q}"` : ''}.`);
         updateUrl({ genre: state.genre, q: state.q });
-        grid.innerHTML = rows.length ? rows.map(p => `
-          <article class="card" id="${p.id}" data-genre="${safe(p.genre)}">
-            <span class="tag">${safe(p.country)}</span>
-            <h3>${safe(p.name)}</h3>
-            <details><summary>Bio</summary><p class="meta">${safe(p.bio)}</p></details>
-          </article>`).join('') : '<p class="meta">No performers match.</p>';
+        grid.innerHTML = rows.length ? rows.map(renderPerformerCard).join('') : '<p class="meta">No performers match.</p>';
       };
       const genreStats = document.querySelector('[data-genre-stats]');
       if (genreStats) {
@@ -244,16 +269,14 @@
       if (shuffle) shuffle.addEventListener('click', () => {
         if (!currentRows.length) return;
         const shuffled = [...currentRows].sort(() => Math.random() - 0.5);
-        grid.innerHTML = shuffled.map(p => `
-          <article class="card" id="${p.id}" data-genre="${safe(p.genre)}">
-            <span class="tag">${safe(p.country)}</span>
-            <h3>${safe(p.name)}</h3>
-            <details><summary>Bio</summary><p class="meta">${safe(p.bio)}</p></details>
-          </article>`).join('');
+        grid.innerHTML = shuffled.map(renderPerformerCard).join('');
         setText('[data-performer-status]', `Shuffled ${shuffled.length} performers${state.genre ? ` in ${state.genre}` : ''}.`);
       });
       render();
-    }).catch(() => {});
+    }).catch(() => {
+      renderError(document.querySelector('[data-performers]'), 'Performer data could not be loaded right now.');
+      setText('[data-performer-status]', 'Lineup currently unavailable.');
+    });
   }
 
   /* ---------- INFO: venues + checklist persistence ---------- */
@@ -261,14 +284,10 @@
     json('venues.json').then(d => {
       const slot = document.querySelector('[data-venues]');
       if (!slot) return;
-      slot.innerHTML = d.items.map(v => `
-        <article class="card" id="${v.id}">
-          <span class="tag">cap. ${v.capacity.toLocaleString()}</span>
-          <h3>${safe(v.name)}</h3>
-          <p class="meta">${safe(v.description)}</p>
-          <address>${safe(v.area)}, Solara Desert Park, Arizona, USA</address>
-        </article>`).join('');
-    }).catch(() => {});
+      slot.innerHTML = d.items.map(renderVenueCard).join('');
+    }).catch(() => {
+      renderError(document.querySelector('[data-venues]'), 'Venue information is temporarily unavailable.');
+    });
     const checks = [...document.querySelectorAll('.checklist input')];
     const updatePack = () => {
       const done = checks.filter(c => c.checked).length;

@@ -1,15 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "performers.schema.json",
   "type": "object",
   "required": [
     "items",
-    "count"
+    "count",
+    "page",
+    "pageSize"
   ],
+  "additionalProperties": false,
   "properties": {
     "items": {
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "required": [
           "id",
           "name",
@@ -19,37 +24,71 @@
         ],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^p[0-9]+$"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "genre": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "Electronic",
+              "Indie",
+              "Alternative",
+              "Hip-Hop",
+              "Experimental",
+              "Ambient",
+              "Synth-pop",
+              "World Fusion"
+            ]
           },
           "country": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "bio": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         }
       }
     },
     "count": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 0
     },
     "page": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "pageSize": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "totalPages": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "filters": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "genre": {
+          "type": "string",
+          "enum": [
+            "Electronic",
+            "Indie",
+            "Alternative",
+            "Hip-Hop",
+            "Experimental",
+            "Ambient",
+            "Synth-pop",
+            "World Fusion"
+          ]
+        }
+      }
     }
   }
 }

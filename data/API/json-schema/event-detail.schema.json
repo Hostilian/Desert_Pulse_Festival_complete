@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "event-detail.schema.json",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "id",
     "type",
@@ -13,19 +15,24 @@
   ],
   "properties": {
     "id": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^e[0-9]+$"
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "enum": ["concert", "workshop", "talk", "dj-set"]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "performerId": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^p[0-9]+$"
     },
     "venueId": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^v[0-9]+$"
     },
     "start": {
       "type": "string",
@@ -36,7 +43,8 @@
       "format": "date-time"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     }
   }
 }

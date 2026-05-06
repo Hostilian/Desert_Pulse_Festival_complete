@@ -2,7 +2,19 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" encoding="UTF-8"/>
 <xsl:param name="id" select="'v1'"/>
+<xsl:template name="replace">
+  <xsl:param name="text"/><xsl:param name="find"/><xsl:param name="with"/>
+  <xsl:choose><xsl:when test="contains($text, $find)"><xsl:value-of select="substring-before($text, $find)"/><xsl:value-of select="$with"/><xsl:call-template name="replace"><xsl:with-param name="text" select="substring-after($text, $find)"/><xsl:with-param name="find" select="$find"/><xsl:with-param name="with" select="$with"/></xsl:call-template></xsl:when><xsl:otherwise><xsl:value-of select="$text"/></xsl:otherwise></xsl:choose>
+</xsl:template>
+<xsl:template name="json-string">
+  <xsl:param name="text"/>
+  <xsl:variable name="s1"><xsl:call-template name="replace"><xsl:with-param name="text" select="$text"/><xsl:with-param name="find" select="'\'"/><xsl:with-param name="with" select="'\\'"/></xsl:call-template></xsl:variable>
+  <xsl:variable name="s2"><xsl:call-template name="replace"><xsl:with-param name="text" select="$s1"/><xsl:with-param name="find" select="'&quot;'"/><xsl:with-param name="with" select="'\&quot;'"/></xsl:call-template></xsl:variable>
+  <xsl:variable name="s3"><xsl:call-template name="replace"><xsl:with-param name="text" select="$s2"/><xsl:with-param name="find" select="'&#10;'"/><xsl:with-param name="with" select="'\n'"/></xsl:call-template></xsl:variable>
+  <xsl:variable name="s4"><xsl:call-template name="replace"><xsl:with-param name="text" select="$s3"/><xsl:with-param name="find" select="'&#13;'"/><xsl:with-param name="with" select="'\r'"/></xsl:call-template></xsl:variable>
+  <xsl:call-template name="replace"><xsl:with-param name="text" select="$s4"/><xsl:with-param name="find" select="'&#9;'"/><xsl:with-param name="with" select="'\t'"/></xsl:call-template>
+</xsl:template>
 <xsl:template match="/festival"><xsl:for-each select="venues/venue[@id=$id]">{
-  "id": "<xsl:value-of select="@id"/>", "name": "<xsl:value-of select="name"/>", "capacity": <xsl:value-of select="capacity"/>, "description": "<xsl:value-of select="description"/>", "area": "<xsl:value-of select="area"/>", "geo": "<xsl:value-of select="geo"/>"
+  "id": "<xsl:call-template name="json-string"><xsl:with-param name="text" select="@id"/></xsl:call-template>", "name": "<xsl:call-template name="json-string"><xsl:with-param name="text" select="name"/></xsl:call-template>", "capacity": <xsl:value-of select="capacity"/>, "description": "<xsl:call-template name="json-string"><xsl:with-param name="text" select="description"/></xsl:call-template>", "area": "<xsl:call-template name="json-string"><xsl:with-param name="text" select="area"/></xsl:call-template>", "geo": "<xsl:call-template name="json-string"><xsl:with-param name="text" select="geo"/></xsl:call-template>"
 }</xsl:for-each></xsl:template>
 </xsl:stylesheet>

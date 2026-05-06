@@ -1,15 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "events.schema.json",
   "type": "object",
   "required": [
     "items",
-    "count"
+    "count",
+    "page",
+    "pageSize"
   ],
+  "additionalProperties": false,
   "properties": {
     "items": {
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "required": [
           "id",
           "type",
@@ -22,19 +27,24 @@
         ],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^e[0-9]+$"
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "enum": ["concert", "workshop", "talk", "dj-set"]
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "performerId": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^p[0-9]+$"
           },
           "venueId": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^v[0-9]+$"
           },
           "start": {
             "type": "string",
@@ -45,25 +55,45 @@
             "format": "date-time"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         }
       }
     },
     "count": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 0
     },
     "page": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "pageSize": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "totalPages": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "filters": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "day": {
+          "type": "string",
+          "format": "date"
+        },
+        "venueId": {
+          "type": "string",
+          "pattern": "^v[0-9]+$"
+        },
+        "performerId": {
+          "type": "string",
+          "pattern": "^p[0-9]+$"
+        }
+      }
     }
   }
 }
