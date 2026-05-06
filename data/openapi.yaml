@@ -11,11 +11,15 @@ paths:
       summary: Get festival identity and general information
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/festival.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/venues.json:
     get:
       summary: Get all venues
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/venues.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/venue-{id}.json:
     get:
       summary: Get one venue by ID
@@ -26,6 +30,8 @@ paths:
           schema: {type: string, pattern: '^v[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/venue-detail.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/performers.json:
     get:
       summary: Get paginated performers list
@@ -41,6 +47,8 @@ paths:
           schema: {type: integer, minimum: 1, maximum: 60, default: 20}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/performers.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/performer-{id}.json:
     get:
       summary: Get one performer by ID
@@ -51,6 +59,8 @@ paths:
           schema: {type: string, pattern: '^p[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/performer-detail.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/events.json:
     get:
       summary: Get paginated events list
@@ -81,6 +91,8 @@ paths:
           schema: {type: integer, minimum: 1, maximum: 60, default: 20}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/events.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
   /data/API/json/event-{id}.json:
     get:
       summary: Get one event by ID
@@ -91,3 +103,16 @@ paths:
           schema: {type: string, pattern: '^e[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/event-detail.schema.json'}}}}
+        '400': {description: Bad request, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Not found, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+components:
+  schemas:
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: integer
+          examples: [400, 404]
+        message:
+          type: string
