@@ -1,104 +1,66 @@
-# Desert Pulse Festival - Project Documentation
+# Desert Pulse Festival - Requirements Checklist
 
-## Title page
+This document contains only assignment requirements and where each requirement is fulfilled in the repository.
 
-Course: Markup Languages  
-Academic year: 2025-2026  
-Project theme: Festival (fictional)  
-Project title: Desert Pulse Festival  
-Group members: Final submission managed in repository metadata and commit history.  
-Submission date: 2026-05-05
+## Context package (20 points)
 
-## Table of contents
-
-1. Brief description of the festival  
-2. List of all requirements and where they are addressed  
-3. Project methodology  
-4. Development process  
-5. Tools used (with versions)  
-6. Examples of key prompts  
-7. Critical evaluation of AI usage
-
-## 1. Brief description of the festival
-
-Desert Pulse Festival is a fictional three-day event held in Solara Desert Park, Arizona (17-19 April 2026). It combines concerts, DJ sets, artist talks, and workshops across four venues. For this project, we prepared a complete XML dataset (60 performers, 60 events), a static website, XSD validation, and API outputs created through XSLT.
-
-## 2. List of all requirements and where they are addressed
-
-| Requirement | Location where addressed |
+| Requirement | Evidence location |
 |---|---|
-| Festival concept specification in Markdown | `specification.md` |
-| Festival XML data file | `data/festival.xml` |
-| Well-formed XML | `data/festival.xml` |
-| Minimum 3 days | `data/festival.xml` (`info/startDate`, `info/endDate`) |
-| Minimum 2 venues | `data/festival.xml` (`venues/venue`, 4 total) |
-| Minimum 60 performers | `data/festival.xml` (`performers/performer`, 60 total) |
-| Minimum 60 programme events | `data/festival.xml` (`programme/event`, 60 total) |
-| Mandatory HTML pages | `web/index.html`, `web/programme.html`, `web/performers.html`, `web/info.html` |
-| Semantic HTML elements and hierarchy | all files in `web/` |
-| Metadata (`title`, `description`) | all files in `web/` |
-| Open Graph tags | all files in `web/` |
-| JSON-LD for festival/events | `web/index.html`, `web/programme.html` |
-| One external CSS file, 50-100 lines | `web/style.css` |
+| Festival concept specification in Markdown (identity, audience, character, website structure) | `specification.md` |
+| Festival XML data file submitted | `data/festival.xml` |
+| XML is well-formed | `data/festival.xml` |
+| Minimum 3 festival days | `data/festival.xml` (`<startDate>2026-04-17</startDate>`, `<endDate>2026-04-19</endDate>`) |
+| Minimum 2 venues | `data/festival.xml` (`<venues><venue .../></venues>`, 4 venues total) |
+| Minimum 60 performers | `data/festival.xml` (`<performers><performer .../></performers>`, 60 performers total) |
+| Minimum 60 programme items (events) | `data/festival.xml` (`<programme><event .../></programme>`, 60 events total) |
+| Required entities present: festival, venues/stages, performers, programme items | `data/festival.xml` |
+
+## HTML, CSS part (20 points)
+
+| Requirement | Evidence location |
+|---|---|
+| Home page (landing/about) | `web/index.html` |
+| Programme page | `web/programme.html` |
+| Performers page (list + detail blocks) | `web/performers.html` |
+| Practical information page | `web/info.html` |
+| Semantic HTML structure and heading hierarchy | `web/index.html`, `web/programme.html`, `web/performers.html`, `web/info.html` |
+| Required semantic elements (`head`, `meta`, `title`, `header`, `section`, `article`, `aside`, `time`, `address`, `footer`, `p`, `ul`/`ol`, `li`, `a`, `img`, `h1`, `h2`, `h3`) | `web/index.html`, `web/programme.html`, `web/performers.html`, `web/info.html` |
+| Metadata (`title`, `meta name="description"`) | `web/index.html`, `web/programme.html`, `web/performers.html`, `web/info.html` |
+| Open Graph minimum (`og:title`, `og:description`, `og:image`) | `web/index.html`, `web/programme.html`, `web/performers.html`, `web/info.html` |
+| Microdata or JSON-LD for festival and events | `web/index.html`, `web/programme.html` |
+| API linkage in website content (corresponds to API endpoints) | `web/programme.html`, `web/performers.html` |
+| One external CSS file, no frameworks/libraries | `web/style.css` |
+| CSS line count between 50 and 100 lines | `web/style.css` |
+| CSS baseline styling (colours, fonts, backgrounds, section separation) | `web/style.css` |
+
+## Data model and API (20 points)
+
+| Requirement | Evidence location |
+|---|---|
+| XML data source | `data/festival.xml` |
 | XSD validation schema | `data/festival.xsd` |
-| Custom XSD restrictions with comments | `data/festival.xsd` |
-| 7 XSLT transformations | `data/API/transformation/` |
-| 7 JSON outputs | `data/API/json/` |
-| 7 JSON Schemas | `data/API/json-schema/` |
-| OpenAPI 3.1 specification | `data/openapi.yaml` |
-| Static JSON API endpoints (`/data/API/json/festival.json`, `/data/API/json/venues.json`, `/data/API/json/venue-{id}.json`, `/data/API/json/performers.json`, `/data/API/json/performer-{id}.json`, `/data/API/json/events.json`, `/data/API/json/event-{id}.json`) | `data/openapi.yaml` |
-| Events filter parameters documented for client-side usage | `data/openapi.yaml` (`day`, `venueId`, `performerId`) |
-| Pagination on list endpoints | `data/openapi.yaml` (`/api/performers`, `/api/events`) |
-| Update justification for data changes | Section 4 in this document |
+| Custom XSD restrictions (pattern/enum/range) with comments | `data/festival.xsd` (`CUSTOM RESTRICTION` comments) |
+| 7 XML -> XSLT -> JSON transformations (executable) | `data/API/transformation/festival.xslt`, `data/API/transformation/venues.xslt`, `data/API/transformation/venue-detail.xslt`, `data/API/transformation/performers.xslt`, `data/API/transformation/performer-detail.xslt`, `data/API/transformation/events.xslt`, `data/API/transformation/event-detail.xslt` |
+| 7 JSON outputs (API response targets) | `data/API/json/festival.json`, `data/API/json/venues.json`, `data/API/json/venue-v1.json`, `data/API/json/performers.json`, `data/API/json/performer-p1.json`, `data/API/json/events.json`, `data/API/json/event-e1.json` |
+| 7 JSON Schemas linked to outputs | `data/API/json-schema/festival.schema.json`, `data/API/json-schema/venues.schema.json`, `data/API/json-schema/venue-detail.schema.json`, `data/API/json-schema/performers.schema.json`, `data/API/json-schema/performer-detail.schema.json`, `data/API/json-schema/events.schema.json`, `data/API/json-schema/event-detail.schema.json` |
+| OpenAPI specification (3.1+) with `info`, `servers`, `paths` | `data/openapi.yaml` |
+| GET `/api/festival` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/festival.json`) |
+| GET `/api/venues` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/venues.json`) |
+| GET `/api/venues/{id}` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/venue-{id}.json`) |
+| GET `/api/performers` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/performers.json`) |
+| GET `/api/performers/{id}` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/performer-{id}.json`) |
+| GET `/api/events` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/events.json`) |
+| GET `/api/events/{id}` equivalent endpoint | `data/openapi.yaml` (`/data/API/json/event-{id}.json`) |
+| Path/query parameters documented | `data/openapi.yaml` |
+| Response status codes include minimum `200`, `400`, `404` per endpoint definition | `data/openapi.yaml` |
+| `/api/events` has at least 2 filters (`day`, `venueId`, `performerId`) | `data/openapi.yaml` (`/data/API/json/events.json` parameters) |
+| Pagination on list endpoint (`page`, `pageSize`) | `data/openapi.yaml` (`/data/API/json/performers.json`, `/data/API/json/events.json`) |
+| JSON response schema linkage via `application/json` and `$ref` | `data/openapi.yaml` |
 
-## 3. Project methodology
+## Documentation (10 points)
 
-We followed a data-first workflow:
-1. Define the festival concept and required entities.
-2. Build the XML dataset.
-3. Validate structure and restrictions with XSD.
-4. Generate JSON endpoint outputs through XSLT transformations.
-5. Document the REST API in OpenAPI 3.1 and map outputs to JSON Schemas.
-6. Build a semantic static website aligned with the same data model.
-7. Write documentation that maps every requirement to concrete files.
-
-## 4. Development process
-
-1. We drafted the concept in `specification.md`.
-2. We expanded `data/festival.xml` to meet the required scope (3 days, 4 venues, 60 performers, 60 events).
-3. We prepared `data/festival.xsd` with explicit custom restrictions (`pattern`, `enum`, `range`) and comments.
-4. We implemented 7 XSLT files and validated the resulting 7 JSON outputs.
-5. We added 7 matching JSON Schema files.
-6. We completed `data/openapi.yaml` with static JSON endpoint paths, parameters for client-side filtering compatibility, and schema references.
-7. We refined the website pages for semantic structure, metadata, Open Graph tags, and JSON-LD.
-8. We cleaned the repository layout so the submission points to one canonical API/data source under `data/`.
-
-Justification for updates to `festival.xml`: the file was expanded and aligned so that all mandatory minimum counts are met and all API transformation outputs stay consistent with the source data.
-
-## 5. Tools used (with versions)
-
-- Python 3.13.5 - validation checks and document generation scripts.
-- python-docx 1.2.0 - generation of `dokumentace.docx`.
-- Cursor IDE - editing and file management.
-- Browser developer tools - static HTML review.
-
-## 6. Examples of key prompts
-
-- Create a fictional festival XML dataset with at least 60 performers and 60 programme events.
-- Build an XSD schema with pattern, enum, and range restrictions.
-- Generate XSLT files that transform festival XML data into JSON API responses.
-- Write OpenAPI 3.1 YAML with required GET endpoints, filters, and response codes.
-- Review HTML pages for semantic tags, metadata, and JSON-LD requirements.
-
-## 7. Critical evaluation of AI usage
-
-AI helped us speed up repetitive drafting tasks, especially in structured data and first-pass schema creation. The biggest limitation was that generated text and data often looked correct at first glance but still needed manual checking. We had to verify IDs, endpoint references, schema alignment, and wording quality ourselves. The useful approach was to treat AI as a draft assistant and keep final decisions and quality control in our hands.
-
-## 8. Privacy and security notes
-
-- The website does not use tracking cookies or third-party analytics scripts.
-- Local storage keys are used only for user experience state on the current device:
-  - `dpf-theme` for theme preference.
-  - `dpf-pack-*` keys for checklist state.
-- Users can clear browser storage at any time to reset these preferences.
-- A repository-level security policy and reporting guidance are provided in `SECURITY.md`.
+| Requirement | Evidence location |
+|---|---|
+| Documentation file in Markdown | `documentation/dokumentace.md` |
+| Documentation file in DOCX | `documentation/dokumentace.docx` |
+| Requirements list with location links | `documentation/dokumentace.md`, `documentation/dokumentace.docx` |

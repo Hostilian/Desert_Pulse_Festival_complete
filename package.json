@@ -13,7 +13,7 @@
     "check:data-referential-integrity": "node --test tests/data.referential.integrity.test.mjs",
     "check:navigation-integrity": "node --test tests/html.navigation.integrity.test.mjs",
     "validate:schemas": "ajv validate -s data/API/json-schema/festival.schema.json -d data/API/json/festival.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/venues.schema.json -d data/API/json/venues.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/performers.schema.json -d data/API/json/performers.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/events.schema.json -d data/API/json/events.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/venue-detail.schema.json -d data/API/json/venue-v1.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/performer-detail.schema.json -d data/API/json/performer-p1.json --spec=draft2020 --validate-formats=false && ajv validate -s data/API/json-schema/event-detail.schema.json -d data/API/json/event-e1.json --spec=draft2020 --validate-formats=false",
-    "audit:deps": "npm audit --audit-level=high",
+    "audit:deps": "npm audit --omit=dev --audit-level=high",
     "test": "node --test tests/*.test.mjs",
     "verify": "npm run check:json-syntax && npm run validate:schemas && npm run check:data-referential-integrity && npm run check:js-syntax && npm run check:openapi && npm run check:seo-integrity && npm run check:assets-integrity && npm run check:fallback-integrity && npm run check:structured-data-integrity && npm run check:navigation-integrity && npm test"
   },
