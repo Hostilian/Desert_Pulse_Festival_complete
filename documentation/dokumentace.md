@@ -65,7 +65,7 @@ Desert Pulse Festival is a fictional three-day multi-genre festival in Solara De
 
 ## 3. Project methodology
 
-Data-first workflow was used:
+Workflow:
 1. Define concept and scope.
 2. Create XML dataset.
 3. Validate XML with XSD.
@@ -76,17 +76,17 @@ Data-first workflow was used:
 
 ## 4. Development process
 
-1. Created the fictional festival concept in `specification.md`.
-2. Prepared `data/festival.xml` with required minimum volumes and entities.
+1. Created the festival concept in `specification.md`.
+2. Prepared `data/festival.xml` with required minimum counts and entities.
 3. Added `data/festival.xsd` with custom restrictions (pattern/enum/range).
 4. Implemented 7 transformations in `data/API/transformation/`.
 5. Generated 7 JSON outputs in `data/API/json/`.
 6. Prepared 7 JSON Schemas in `data/API/json-schema/`.
-7. Finalized `data/openapi.yaml` including required endpoints, parameters, and responses.
-8. Built and adjusted static pages in `web/` and baseline styling in `web/style.css`.
+7. Finalized `data/openapi.yaml` with required endpoints, parameters, and responses.
+8. Built static pages in `web/` and baseline styling in `web/style.css`.
 9. Produced final documentation in Markdown and DOCX.
 
-Justification for XML updates: the XML data was expanded and synchronized with transformation and API outputs to satisfy required minimum counts and endpoint consistency.
+Justification for XML updates: expanded data to meet required counts and keep API outputs consistent.
 
 ## 5. Tools used (with versions)
 
@@ -97,12 +97,12 @@ Justification for XML updates: the XML data was expanded and synchronized with t
 
 ## 6. Examples of key prompts
 
-- Create a fictional festival XML dataset with at least 60 performers and 60 programme events.
-- Build an XSD schema with pattern, enum, and range restrictions.
-- Generate XSLT files for XML to JSON endpoint outputs.
-- Write OpenAPI 3.1 YAML with required GET endpoints, filters, and response codes.
-- Check static pages for semantic HTML, metadata, Open Graph, and JSON-LD.
+- Create festival XML with at least 60 performers and 60 events.
+- Build XSD with pattern, enum, and range restrictions.
+- Generate XSLT transformations for JSON endpoint files.
+- Write OpenAPI 3.1 with required GET endpoints, filters, and response codes.
+- Validate static pages for semantic HTML, metadata, Open Graph, and JSON-LD.
 
 ## 7. Critical evaluation of AI usage
 
-AI accelerated drafting and repetitive structuring, but manual validation was required for correctness. Final quality depended on human checks of schema consistency, endpoint coverage, and requirement traceability. The most effective approach was iterative prompting with strict verification before accepting outputs.
+AI helped with drafts. Manual checks were needed for IDs, schema links, endpoint coverage, and requirement mapping. Final acceptance was based on manual verification, not generated text alone.

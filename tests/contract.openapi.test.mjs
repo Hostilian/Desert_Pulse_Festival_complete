@@ -23,6 +23,14 @@ test('openapi schema references exist', () => {
   const refs = [...specText.matchAll(/\$ref:\s*'([^']+)'/g)].map(match => match[1]);
   assert.ok(refs.length > 0, 'No schema references discovered');
   refs.forEach(ref => {
+    if (ref.startsWith('#/')) {
+      const target = ref
+        .slice(2)
+        .split('/')
+        .reduce((node, segment) => (node && typeof node === 'object' ? node[segment] : undefined), spec);
+      assert.notEqual(target, undefined, `Missing internal schema ref target: ${ref}`);
+      return;
+    }
     const schemaPath = path.join(root, 'data', ref.replace('./', ''));
     assert.equal(fs.existsSync(schemaPath), true, `Missing schema ref target: ${ref}`);
   });
