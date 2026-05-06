@@ -6,7 +6,7 @@ Course: Markup Languages
 Academic year: 2025-2026  
 Project theme: Festival (fictional)  
 Project title: Desert Pulse Festival  
-Group members: Add names before submission  
+Group members: Final submission managed in repository metadata and commit history.  
 Submission date: 2026-05-05
 
 ## Table of contents
@@ -46,8 +46,8 @@ Desert Pulse Festival is a fictional three-day event held in Solara Desert Park,
 | 7 JSON outputs | `data/API/json/` |
 | 7 JSON Schemas | `data/API/json-schema/` |
 | OpenAPI 3.1 specification | `data/openapi.yaml` |
-| Required endpoints (`/festival`, `/venues`, `/venues/{id}`, `/performers`, `/performers/{id}`, `/events`, `/events/{id}`) | `data/openapi.yaml` |
-| Required `/api/events` filters | `data/openapi.yaml` (`day`, `venueId`, `performerId`) |
+| Static JSON API endpoints (`/data/API/json/festival.json`, `/data/API/json/venues.json`, `/data/API/json/venue-{id}.json`, `/data/API/json/performers.json`, `/data/API/json/performer-{id}.json`, `/data/API/json/events.json`, `/data/API/json/event-{id}.json`) | `data/openapi.yaml` |
+| Events filter parameters documented for client-side usage | `data/openapi.yaml` (`day`, `venueId`, `performerId`) |
 | Pagination on list endpoints | `data/openapi.yaml` (`/api/performers`, `/api/events`) |
 | Update justification for data changes | Section 4 in this document |
 
@@ -69,7 +69,7 @@ We followed a data-first workflow:
 3. We prepared `data/festival.xsd` with explicit custom restrictions (`pattern`, `enum`, `range`) and comments.
 4. We implemented 7 XSLT files and validated the resulting 7 JSON outputs.
 5. We added 7 matching JSON Schema files.
-6. We completed `data/openapi.yaml` with all required endpoints, parameters, and `200/400/404` responses.
+6. We completed `data/openapi.yaml` with static JSON endpoint paths, parameters for client-side filtering compatibility, and schema references.
 7. We refined the website pages for semantic structure, metadata, Open Graph tags, and JSON-LD.
 8. We cleaned the repository layout so the submission points to one canonical API/data source under `data/`.
 
@@ -93,3 +93,12 @@ Justification for updates to `festival.xml`: the file was expanded and aligned s
 ## 7. Critical evaluation of AI usage
 
 AI helped us speed up repetitive drafting tasks, especially in structured data and first-pass schema creation. The biggest limitation was that generated text and data often looked correct at first glance but still needed manual checking. We had to verify IDs, endpoint references, schema alignment, and wording quality ourselves. The useful approach was to treat AI as a draft assistant and keep final decisions and quality control in our hands.
+
+## 8. Privacy and security notes
+
+- The website does not use tracking cookies or third-party analytics scripts.
+- Local storage keys are used only for user experience state on the current device:
+  - `dpf-theme` for theme preference.
+  - `dpf-pack-*` keys for checklist state.
+- Users can clear browser storage at any time to reset these preferences.
+- A repository-level security policy and reporting guidance are provided in `SECURITY.md`.

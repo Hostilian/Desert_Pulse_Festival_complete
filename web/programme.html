@@ -5,13 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programme | Desert Pulse Festival</title>
 <meta name="description" content="Full three-day programme of Desert Pulse Festival - filterable by day, venue, and performer. Built from the festival JSON API.">
-<meta name="theme-color" content="#1a0f2b">
+<meta name="theme-color" content="#11162b">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
 <meta property="og:title" content="Programme | Desert Pulse Festival">
 <meta property="og:description" content="60 events across three days and four venues - filter and search the lineup.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://picsum.photos/seed/desertpulse-programme/1200/630">
+<meta property="og:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/programme-og.svg">
 <meta property="og:url" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/programme.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Programme | Desert Pulse Festival">
+<meta name="twitter:description" content="60 events across three days and four venues - filter and search the lineup.">
+<meta name="twitter:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/programme-og.svg">
+<link rel="canonical" href="https://hostilian.github.io/Desert_Pulse_Festival_complete/programme.html">
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body data-page="programme">
 <a class="skip-link" href="#content">Skip to content</a>
@@ -32,9 +42,9 @@
     <p class="meta">60 events across three days and four venues. Pick a day, filter by venue, or search by name.</p>
 
     <div class="toolbar" role="tablist" aria-label="Festival day">
-      <button class="chip" role="tab" aria-selected="true" tabindex="0" data-day-btn="17">Fri 17 Apr</button>
-      <button class="chip" role="tab" aria-selected="false" tabindex="-1" data-day-btn="18">Sat 18 Apr</button>
-      <button class="chip" role="tab" aria-selected="false" tabindex="-1" data-day-btn="19">Sun 19 Apr</button>
+      <button id="programme-tab-17" class="chip" role="tab" aria-controls="programme-panel" aria-selected="true" tabindex="0" data-day-btn="17">Fri 17 Apr</button>
+      <button id="programme-tab-18" class="chip" role="tab" aria-controls="programme-panel" aria-selected="false" tabindex="-1" data-day-btn="18">Sat 18 Apr</button>
+      <button id="programme-tab-19" class="chip" role="tab" aria-controls="programme-panel" aria-selected="false" tabindex="-1" data-day-btn="19">Sun 19 Apr</button>
     </div>
 
     <div class="toolbar" data-venue-chips aria-label="Filter by venue">
@@ -48,7 +58,7 @@
     </div>
     <p class="statline" data-programme-status aria-live="polite">Loading live programme...</p>
 
-    <div class="grid" data-events>
+    <div id="programme-panel" class="grid" role="tabpanel" aria-labelledby="programme-tab-17" data-events>
       <article class="card">
         <span class="tag">concert</span>
         <h3>Lunar Waves Live at Desert Pulse</h3>
@@ -79,12 +89,12 @@
       <li><code>venueId</code> - filter by venue identifier</li>
       <li><code>performerId</code> - filter by performer identifier</li>
     </ul>
-    <p class="meta">See <a href="data/API/json/events.json">GET /api/events</a> and <a href="data/openapi.yaml">openapi.yaml</a>.</p>
+    <p class="meta">See <a href="data/API/json/events.json">data/API/json/events.json</a> and <a href="data/openapi.yaml">openapi.yaml</a>.</p>
   </aside>
 </main>
 
 <footer>
-  <p>Desert Pulse Festival programme page</p>
+  <p>Desert Pulse Festival programme - premium scheduling and discovery interface.</p>
 </footer>
 
 <script type="application/ld+json">
@@ -102,23 +112,23 @@
     "@context": "https://schema.org",
     "@type": "MusicEvent",
     "name": "Neon Horizon Live at Desert Pulse",
-    "startDate": "2026-04-18T19:00:00",
-    "endDate": "2026-04-18T20:00:00",
+    "startDate": "2026-04-17T11:00:00",
+    "endDate": "2026-04-17T12:15:00",
     "location": { "@type": "Place", "name": "Mirage Tent" },
     "performer": { "@type": "MusicGroup", "name": "Neon Horizon" }
   },
   {
     "@context": "https://schema.org",
     "@type": "MusicEvent",
-    "name": "Echo Atlas Live at Desert Pulse",
-    "startDate": "2026-04-19T21:00:00",
-    "endDate": "2026-04-19T22:00:00",
-    "location": { "@type": "Place", "name": "Oasis Workshop Dome" },
-    "performer": { "@type": "MusicGroup", "name": "Echo Atlas" }
+    "name": "Artist Talk with Desert Echo",
+    "startDate": "2026-04-17T12:00:00",
+    "endDate": "2026-04-17T12:50:00",
+    "location": { "@type": "Place", "name": "Dune Arena" },
+    "performer": { "@type": "MusicGroup", "name": "Desert Echo" }
   }
 ]
 </script>
 <noscript><p>For the live day and venue filters, enable JavaScript. The static event list still shows sample programme entries.</p></noscript>
-<script src="app.js" defer></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

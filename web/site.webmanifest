@@ -1,0 +1,23 @@
+{
+  "name": "Desert Pulse Festival",
+  "short_name": "Desert Pulse",
+  "description": "Futuristic festival experience with live programme, lineup, and visitor planning.",
+  "start_url": "/Desert_Pulse_Festival_complete/",
+  "display": "standalone",
+  "background_color": "#11162b",
+  "theme_color": "#8d7dff",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

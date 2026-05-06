@@ -8,8 +8,8 @@
         <startDate>2026-04-17</startDate>
         <endDate>2026-04-19</endDate>
         <description>A fictional three-day desert music and arts festival combining indie, electronic, hip-hop, workshops, visual installations, and night-time desert experiences.</description>
-        <ticketUrl>https://example.com/desert-pulse/tickets</ticketUrl>
-        <website>https://example.com/desert-pulse</website>
+        <ticketUrl>https://hostilian.github.io/Desert_Pulse_Festival_complete/info.html</ticketUrl>
+        <website>https://hostilian.github.io/Desert_Pulse_Festival_complete/</website>
     </info>
     <venues>
         <venue id="v1">

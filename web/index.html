@@ -3,16 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desert Pulse Festival 2026</title>
-<meta name="description" content="Desert Pulse Festival is a fictional three-day event in Arizona with concerts, talks, and workshops. 17-19 April 2026 at Solara Desert Park.">
-<meta name="theme-color" content="#1a0f2b">
-<meta property="og:title" content="Desert Pulse Festival 2026">
-<meta property="og:description" content="Three days of music, art, talks, and workshops in Solara Desert Park, Arizona.">
+<title>Desert Pulse Festival 2026 | Futuristic Desert Experience</title>
+<meta name="description" content="Desert Pulse Festival is a three-day futuristic event in Arizona with concerts, talks, workshops, and immersive desert visuals. 17-19 April 2026 at Solara Desert Park.">
+<meta name="theme-color" content="#11162b">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+<meta property="og:title" content="Desert Pulse Festival 2026 | Futuristic Desert Experience">
+<meta property="og:description" content="Three days of music, visual art, talks, and workshops in a neon desert atmosphere.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://picsum.photos/seed/desertpulse/1200/630">
+<meta property="og:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/home-og.svg">
 <meta property="og:url" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Desert Pulse Festival 2026 | Futuristic Desert Experience">
+<meta name="twitter:description" content="Three days of music, visuals, talks, and workshops in a neon desert atmosphere.">
+<meta name="twitter:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/home-og.svg">
+<link rel="canonical" href="https://hostilian.github.io/Desert_Pulse_Festival_complete/">
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="site.webmanifest">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ff6a3d'/%3E%3C/svg%3E">
 </head>
 <body data-page="home">
@@ -31,14 +40,15 @@
 <main id="content">
   <section class="hero" aria-labelledby="hero-title">
     <p class="meta">17 - 19 April 2026 &middot; Solara Desert Park, Arizona</p>
-    <h1 id="hero-title">A pulse in the desert.</h1>
-    <p class="lede">Three days of indie, electronic, hip-hop, and experimental sound across four open-air venues. Plus talks, workshops, and visual installations under a wide desert sky.</p>
-    <div class="countdown" data-countdown aria-live="polite">
+    <h1 id="hero-title">Step into the neon frontier.</h1>
+    <p class="lede">Three days of indie, electronic, hip-hop, and experimental sound across four open-air venues, layered with immersive visuals, talks, and creative workshops under a futuristic desert sky.</p>
+    <div class="countdown" data-countdown aria-live="off">
       <div><b>--</b><span>days</span></div>
       <div><b>--</b><span>hours</span></div>
       <div><b>--</b><span>min</span></div>
       <div><b>--</b><span>sec</span></div>
     </div>
+    <p class="meta" data-countdown-status aria-live="polite">Festival countdown is active.</p>
     <p><a class="button" href="programme.html">See the programme</a></p>
     <p class="statline" data-live-counts><span class="pill">60 performers</span><span class="pill">60 events</span><span class="pill">4 venues</span></p>
     <p class="meta">Tonight's random spotlight: <strong data-spotlight>Lunar Waves (Electronic, USA)</strong></p>
@@ -97,19 +107,19 @@
 
   <aside aria-labelledby="api">
     <h2 id="api">Data &amp; API</h2>
-    <p class="meta">The site is built on top of an XML dataset (<code>data/festival.xml</code>) transformed via XSLT into JSON endpoints described in OpenAPI.</p>
+    <p class="meta">The site is built on top of an XML dataset (<code>data/festival.xml</code>) transformed via XSLT into static JSON endpoints described in OpenAPI.</p>
     <ul>
-      <li><a href="data/API/json/festival.json">GET /api/festival</a></li>
-      <li><a href="data/API/json/events.json">GET /api/events</a></li>
-      <li><a href="data/API/json/performers.json">GET /api/performers</a></li>
-      <li><a href="data/API/json/venues.json">GET /api/venues</a></li>
+      <li><a href="data/API/json/festival.json">data/API/json/festival.json</a></li>
+      <li><a href="data/API/json/events.json">data/API/json/events.json</a></li>
+      <li><a href="data/API/json/performers.json">data/API/json/performers.json</a></li>
+      <li><a href="data/API/json/venues.json">data/API/json/venues.json</a></li>
       <li><a href="data/openapi.yaml">OpenAPI specification</a></li>
     </ul>
   </aside>
 </main>
 
 <footer>
-  <p>&copy; 2026 Desert Pulse Festival &middot; Student project &middot; Markup Languages course</p>
+  <p>&copy; 2026 Desert Pulse Festival. Premium digital experience prototype with validated XML-driven API delivery.</p>
 </footer>
 
 <script type="application/ld+json">
@@ -131,11 +141,11 @@
     }
   },
   "description": "A fictional three-day festival of music, talks, workshops, and visual art in a desert setting.",
-  "image": "https://picsum.photos/seed/desertpulse/1200/630",
+  "image": "https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/home-og.svg",
   "url": "https://hostilian.github.io/Desert_Pulse_Festival_complete/"
 }
 </script>
 <noscript><p>Interactive filters and live lineup updates need JavaScript, but all core information remains available in static form.</p></noscript>
-<script src="app.js" defer></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

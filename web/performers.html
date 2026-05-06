@@ -5,13 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Performers | Desert Pulse Festival</title>
 <meta name="description" content="The full lineup of 60 performers at Desert Pulse Festival 2026, with genre and country information. Search and filter by genre.">
-<meta name="theme-color" content="#1a0f2b">
+<meta name="theme-color" content="#11162b">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
 <meta property="og:title" content="Performers | Desert Pulse Festival">
 <meta property="og:description" content="60 artists across indie, electronic, hip-hop, alternative, ambient, world fusion and experimental.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://picsum.photos/seed/desertpulse-performers/1200/630">
+<meta property="og:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/performers-og.svg">
 <meta property="og:url" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/performers.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Performers | Desert Pulse Festival">
+<meta name="twitter:description" content="60 artists across indie, electronic, hip-hop, alternative, ambient, world fusion and experimental.">
+<meta name="twitter:image" content="https://hostilian.github.io/Desert_Pulse_Festival_complete/assets/social/performers-og.svg">
+<link rel="canonical" href="https://hostilian.github.io/Desert_Pulse_Festival_complete/performers.html">
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body data-page="performers">
 <a class="skip-link" href="#content">Skip to content</a>
@@ -80,15 +90,15 @@
   <aside aria-labelledby="api-note">
     <h2 id="api-note">API references</h2>
     <ul>
-      <li><a href="data/API/json/performers.json">GET /api/performers</a></li>
-      <li><a href="data/API/json/performer-p1.json">GET /api/performers/{id}</a></li>
+      <li><a href="data/API/json/performers.json">data/API/json/performers.json</a></li>
+      <li><a href="data/API/json/performer-p1.json">data/API/json/performer-p1.json</a></li>
     </ul>
     <p class="meta">Cards above are rendered live from the JSON API; the static markup is the no-script fallback.</p>
   </aside>
 </main>
 
 <footer>
-  <p>Desert Pulse Festival performers page</p>
+  <p>Desert Pulse Festival performers - premium lineup discovery experience.</p>
 </footer>
 
 <script type="application/ld+json">
@@ -110,6 +120,6 @@
 }
 </script>
 <noscript><p>Search and genre filters require JavaScript. The fallback performer cards are still available below.</p></noscript>
-<script src="app.js" defer></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

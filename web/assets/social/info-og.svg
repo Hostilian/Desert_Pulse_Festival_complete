@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#11162b"/>
+  <path d="M0 520 C260 420 520 600 1200 430 L1200 630 L0 630 Z" fill="#8d7dff" opacity="0.35"/>
+  <text x="96" y="260" fill="#f8faff" font-family="Arial, sans-serif" font-size="68" font-weight="700">Desert Pulse Info</text>
+  <text x="96" y="330" fill="#ced7ff" font-family="Arial, sans-serif" font-size="34">Planning, transport, and on-site checklist</text>
+</svg>

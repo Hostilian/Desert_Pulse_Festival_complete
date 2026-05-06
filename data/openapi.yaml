@@ -2,25 +2,21 @@ openapi: 3.1.0
 info:
   title: Desert Pulse Festival API
   version: 1.0.0
-  description: Static REST-style API specification based on the Desert Pulse Festival XML data.
+  description: Static JSON data endpoints generated from the Desert Pulse Festival XML dataset.
 servers:
-  - url: https://example.com
+  - url: https://hostilian.github.io/Desert_Pulse_Festival_complete
 paths:
-  /api/festival:
+  /data/API/json/festival.json:
     get:
       summary: Get festival identity and general information
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/festival.schema.json'}}}}
-        '400': {description: Bad request}
-        '404': {description: Festival not found}
-  /api/venues:
+  /data/API/json/venues.json:
     get:
       summary: Get all venues
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/venues.schema.json'}}}}
-        '400': {description: Bad request}
-        '404': {description: Venues not found}
-  /api/venues/{id}:
+  /data/API/json/venue-{id}.json:
     get:
       summary: Get one venue by ID
       parameters:
@@ -30,12 +26,10 @@ paths:
           schema: {type: string, pattern: '^v[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/venue-detail.schema.json'}}}}
-        '400': {description: Invalid venue ID}
-        '404': {description: Venue not found}
-  /api/performers:
+  /data/API/json/performers.json:
     get:
-      summary: Get performers with pagination
-      description: Returns one page of performers in `items`; `count` is the total number of matching performers across all pages.
+      summary: Get paginated performers list
+      description: Returns one static page payload. Client code can follow `count` and `pageSize` to request additional pages.
       parameters:
         - name: page
           in: query
@@ -47,9 +41,7 @@ paths:
           schema: {type: integer, minimum: 1, maximum: 60, default: 20}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/performers.schema.json'}}}}
-        '400': {description: Invalid pagination parameter}
-        '404': {description: Performers not found}
-  /api/performers/{id}:
+  /data/API/json/performer-{id}.json:
     get:
       summary: Get one performer by ID
       parameters:
@@ -59,28 +51,26 @@ paths:
           schema: {type: string, pattern: '^p[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/performer-detail.schema.json'}}}}
-        '400': {description: Invalid performer ID}
-        '404': {description: Performer not found}
-  /api/events:
+  /data/API/json/events.json:
     get:
-      summary: Get programme events with filters and pagination
-      description: Returns one page of events in `items`; `count` is the total number of matching events before pagination.
+      summary: Get paginated events list
+      description: Returns one static page payload. Query parameters are accepted for compatibility and can be applied client-side.
       parameters:
         - name: day
           in: query
           required: false
           schema: {type: string, format: date}
-          description: Filter events by day, e.g. 2026-04-17.
+          description: Day filter value expected by client-side UI, for example 2026-04-17.
         - name: venueId
           in: query
           required: false
           schema: {type: string, pattern: '^v[0-9]+$'}
-          description: Filter events by venue ID.
+          description: Venue filter value expected by client-side UI.
         - name: performerId
           in: query
           required: false
           schema: {type: string, pattern: '^p[0-9]+$'}
-          description: Filter events by performer ID.
+          description: Performer filter value expected by client-side UI.
         - name: page
           in: query
           required: false
@@ -91,9 +81,7 @@ paths:
           schema: {type: integer, minimum: 1, maximum: 60, default: 20}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/events.schema.json'}}}}
-        '400': {description: Invalid filter or pagination parameter}
-        '404': {description: Events not found}
-  /api/events/{id}:
+  /data/API/json/event-{id}.json:
     get:
       summary: Get one event by ID
       parameters:
@@ -103,5 +91,3 @@ paths:
           schema: {type: string, pattern: '^e[0-9]+$'}
       responses:
         '200': {description: OK, content: {application/json: {schema: {$ref: './API/json-schema/event-detail.schema.json'}}}}
-        '400': {description: Invalid event ID}
-        '404': {description: Event not found}

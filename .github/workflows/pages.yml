@@ -25,6 +25,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify lockfile consistency
+        run: npm ci --ignore-scripts --dry-run
+
+      - name: Enforce clean lockfile
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! git diff --exit-code -- package-lock.json; then
+            echo "package-lock.json changed during CI install checks."
+            exit 1
+          fi
 
       - name: Validate required paths
         shell: bash
@@ -44,19 +60,43 @@ jobs:
           done
 
       - name: Validate JSON payload syntax
-        shell: bash
-        run: |
-          set -euo pipefail
-          for f in data/API/json/*.json; do
-            node -e "JSON.parse(require('node:fs').readFileSync(process.argv[1], 'utf8'))" "$f"
-          done
+        run: npm run check:json-syntax
 
       - name: Validate JSON payloads against schemas
-        run: |
-          npx --yes ajv-cli validate -s data/API/json-schema/festival.schema.json -d data/API/json/festival.json --spec=draft2020 --validate-formats=false
-          npx --yes ajv-cli validate -s data/API/json-schema/venues.schema.json -d data/API/json/venues.json --spec=draft2020 --validate-formats=false
-          npx --yes ajv-cli validate -s data/API/json-schema/performers.schema.json -d data/API/json/performers.json --spec=draft2020 --validate-formats=false
-          npx --yes ajv-cli validate -s data/API/json-schema/events.schema.json -d data/API/json/events.json --spec=draft2020 --validate-formats=false
+        run: npm run validate:schemas
+
+      - name: Validate data referential integrity
+        run: npm run check:data-referential-integrity
+
+      - name: Validate JavaScript syntax
+        run: npm run check:js-syntax
+
+      - name: Run frontend unit tests
+        run: npm test
+
+      - name: Validate OpenAPI quality checks
+        run: npm run check:openapi
+
+      - name: Validate SEO integrity checks
+        run: npm run check:seo-integrity
+
+      - name: Validate static assets integrity
+        run: npm run check:assets-integrity
+
+      - name: Validate fallback content integrity
+        run: npm run check:fallback-integrity
+
+      - name: Validate structured data integrity
+        run: npm run check:structured-data-integrity
+
+      - name: Validate navigation accessibility integrity
+        run: npm run check:navigation-integrity
+
+      - name: Dependency security audit (high+)
+        run: npm run audit:deps
+
+      - name: Validate repository hygiene rules
+        run: node --test tests/repository.hygiene.test.mjs
 
       - name: Validate core HTML exists
         shell: bash
@@ -74,6 +114,73 @@ jobs:
               exit 1
             fi
           done
+
+      - name: Validate SEO support files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required_seo=(
+            "web/robots.txt"
+            "web/sitemap.xml"
+            "web/site.webmanifest"
+          )
+          for p in "${required_seo[@]}"; do
+            if [ ! -f "$p" ]; then
+              echo "Missing SEO file: $p"
+              exit 1
+            fi
+          done
+
+      - name: Validate internal HTML links
+        run: |
+          node - <<'EOF'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const base = path.resolve('web');
+          const pages = ['index.html', 'programme.html', 'performers.html', 'info.html'];
+          const attrRegex = /(href|src)\s*=\s*"([^"]+)"/g;
+          const missing = [];
+          for (const page of pages) {
+            const full = path.join(base, page);
+            const html = fs.readFileSync(full, 'utf8');
+            let m;
+            while ((m = attrRegex.exec(html))) {
+              const target = m[2].trim();
+              if (!target || target.startsWith('http') || target.startsWith('data:') || target.startsWith('#') || target.startsWith('mailto:')) continue;
+              const clean = target.split('?')[0].split('#')[0];
+              if (!clean) continue;
+              const resolved = path.resolve(base, clean);
+              if (!fs.existsSync(resolved)) missing.push(`${page} -> ${clean}`);
+            }
+          }
+          if (missing.length) {
+            console.error('Broken internal references:\\n' + missing.join('\\n'));
+            process.exit(1);
+          }
+          console.log('Internal references look good');
+          EOF
+
+      - name: Validate premium shell conventions
+        run: |
+          node - <<'EOF'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const pages = ['index.html', 'programme.html', 'performers.html', 'info.html'];
+          const base = path.resolve('web');
+          const problems = [];
+          for (const page of pages) {
+            const html = fs.readFileSync(path.join(base, page), 'utf8');
+            if (!html.includes('class="skip-link"')) problems.push(`${page}: missing skip link`);
+            if (!html.includes('data-toggle-theme')) problems.push(`${page}: missing theme toggle`);
+            if (!html.includes('type="module" src="app.js"')) problems.push(`${page}: app.js is not loaded as module`);
+            if (!html.includes('<main id="content">')) problems.push(`${page}: missing main content landmark`);
+          }
+          if (problems.length) {
+            console.error('Shell convention issues:\\n' + problems.join('\\n'));
+            process.exit(1);
+          }
+          console.log('Premium shell conventions validated');
+          EOF
 
   build_artifact:
     needs: validate
@@ -95,6 +202,64 @@ jobs:
           cp specification.md dist/specification.md
           cp -r documentation dist/documentation
           touch dist/.nojekyll
+
+      - name: Validate dist artifact contents
+        shell: bash
+        run: |
+          set -euo pipefail
+          required_dist=(
+            "dist/index.html"
+            "dist/programme.html"
+            "dist/performers.html"
+            "dist/info.html"
+            "dist/site.webmanifest"
+            "dist/assets/icons/icon-192.svg"
+            "dist/assets/icons/icon-512.svg"
+            "dist/assets/social/home-og.svg"
+            "dist/assets/social/programme-og.svg"
+            "dist/assets/social/performers-og.svg"
+            "dist/assets/social/info-og.svg"
+            "dist/data/openapi.yaml"
+            "dist/specification.md"
+            "dist/documentation"
+            "dist/.nojekyll"
+          )
+          for p in "${required_dist[@]}"; do
+            if [ ! -e "$p" ]; then
+              echo "Missing dist artifact path: $p"
+              exit 1
+            fi
+          done
+
+      - name: Validate dist internal links
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'EOF'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const base = path.resolve('dist');
+          const pages = ['index.html', 'programme.html', 'performers.html', 'info.html'];
+          const attrRegex = /(href|src)\s*=\s*"([^"]+)"/g;
+          const missing = [];
+          for (const page of pages) {
+            const html = fs.readFileSync(path.join(base, page), 'utf8');
+            let match;
+            while ((match = attrRegex.exec(html))) {
+              const target = match[2].trim();
+              if (!target || target.startsWith('http') || target.startsWith('data:') || target.startsWith('#') || target.startsWith('mailto:')) continue;
+              const clean = target.split('?')[0].split('#')[0];
+              if (!clean) continue;
+              const resolved = path.resolve(base, clean);
+              if (!fs.existsSync(resolved)) missing.push(`${page} -> ${clean}`);
+            }
+          }
+          if (missing.length) {
+            console.error('Broken dist references:\n' + missing.join('\n'));
+            process.exit(1);
+          }
+          console.log('Dist references look good');
+          EOF
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
