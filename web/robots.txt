@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hostilian.github.io/Desert_Pulse_Festival_complete/sitemap.xml
